@@ -1,5 +1,9 @@
 #include "../nfc_i.h"
 #include <dolphin/dolphin.h>
+#include <notification/notification.h>
+#include <notification/notification_messages.h>
+
+NotificationApp* notify;
 
 bool nfc_detect_reader_worker_callback(NfcWorkerEvent event, void* context) {
     UNUSED(event);
@@ -16,6 +20,8 @@ void nfc_scene_detect_reader_callback(void* context) {
 }
 
 void nfc_scene_detect_reader_on_enter(void* context) {
+    notify = furi_record_open(RECORD_NOTIFICATION);
+    
     Nfc* nfc = context;
     DOLPHIN_DEED(DolphinDeedNfcEmulate);
 
@@ -38,10 +44,14 @@ bool nfc_scene_detect_reader_on_event(void* context, SceneManagerEvent event) {
 
     if(event.type == SceneManagerEventTypeCustom) {
         if(event.event == NfcCustomEventViewExit) {
+            furi_record_close(RECORD_NOTIFICATION);
+
             nfc_worker_stop(nfc->worker);
             scene_manager_next_scene(nfc->scene_manager, NfcSceneMfkeyNoncesInfo);
             consumed = true;
         } else if(event.event == NfcWorkerEventDetectReaderMfkeyCollected) {
+            notification_message(notify, &sequence_success);
+
             detect_reader_inc_nonce_cnt(nfc->detect_reader);
             consumed = true;
         }
