@@ -7,4 +7,5 @@ fi
 
 ./fbt COMPACT=1 DEBUG=0 updater_package -c
 ./fbt COMPACT=1 DEBUG=0 updater_package
-tar -czvf dist/f7-C/update.tgz dist/f7-C/f7-update-local/
+cd dist/f7-C
+tar -czvf update.tgz f7-update-local
