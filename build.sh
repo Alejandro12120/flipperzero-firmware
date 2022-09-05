@@ -5,7 +5,9 @@ if [ "$EUID" -ne 0 ]
     exit
 fi
 
+export DIST_SUFFIX=slow-cfw
+
 ./fbt COMPACT=1 DEBUG=0 updater_package -c
 ./fbt COMPACT=1 DEBUG=0 updater_package
 cd dist/f7-C
-tar -czvf update.tgz f7-update-local
+tar -czvf update.tgz f7-update-slow-cfw
