@@ -69,8 +69,8 @@ See changelog in releases for latest updates!
 - UniversalRF Remix / Sub-GHz Remote [(by ESurge)](https://github.com/ESurge/flipperzero-firmware-unirfremix)[(updated and all protocol support added by darmiel & xMasterX)](https://github.com/darmiel/flipper-playlist/tree/feat/unirf-protocols)
 - Tetris (with fixes) [(by jeffplang)](https://github.com/jeffplang/flipperzero-firmware/tree/tetris_game/applications/tetris_game)
 - Spectrum Analyzer (with changes) [(by jolcese)](https://github.com/jolcese/flipperzero-firmware/tree/spectrum/applications/spectrum_analyzer) - [Ultra Narrow mode & scan channels non-consecutively](https://github.com/theY4Kman/flipperzero-firmware/commits?author=theY4Kman)
-- `Excluded from releases` - Arkanoid (with fixes) [(by gotnull)](https://github.com/gotnull/flipperzero-firmware-wPlugins)
-- `Excluded from releases` - Tic Tac Toe (with fixes) [(by gotnull)](https://github.com/gotnull/flipperzero-firmware-wPlugins)
+- Arkanoid (with fixes) [(by gotnull)](https://github.com/gotnull/flipperzero-firmware-wPlugins)
+- Tic Tac Toe (with fixes) [(by gotnull)](https://github.com/gotnull/flipperzero-firmware-wPlugins)
 
 ### Other changes
 
