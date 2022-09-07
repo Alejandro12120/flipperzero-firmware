@@ -1,5 +1,5 @@
 V:0
-T:1662385171
+T:1662548431
 D:badusb
 D:dolphin
 D:infrared
@@ -10,8 +10,10 @@ D:subghz
 D:u2f
 D:unirf
 D:badusb/layouts
-F:0e41ba26498b7511d7c9e6e6b5e3b149:1592:badusb/demo_macos.txt
-F:46a332993ca94b9aa692030ebaa19c70:1552:badusb/demo_windows.txt
+F:fd3189713592a09791100350bdb474b9:839:badusb/Honk.txt
+F:2f2d21843efc9287dc43ccf19f1438d0:5281:badusb/Kiosk-Evasion-Bruteforce.txt
+F:ddab5ba6106dad4778f61dc63285ec2b:923:badusb/Mario-head.txt
+F:fcc643ef9e89a26f2a662ebf0b8de3df:1157:badusb/ProMoan.txt
 F:1139810f61ec7f8c8fe0398d92578b31:256:badusb/layouts/da-DA.kl
 F:13504463372b269bd102c68725921d90:256:badusb/layouts/de-CH.kl
 F:f392e25a23f50691b5a37e67845dec76:256:badusb/layouts/de-DE.kl
@@ -254,7 +256,12 @@ F:86efbebdf41bb6bf15cc51ef88f069d5:2565:nfc/assets/country_code.nfc
 F:41b4f08774249014cb8d3dffa5f5c07d:1757:nfc/assets/currency_code.nfc
 F:5f57e2ecfc850efb74c7d2677eb75a2e:51832:nfc/assets/mf_classic_dict.nfc
 F:319958d37b2316a2e752ebb856c32524:126:rfidfuzzer/example_uids.txt
+D:subghz/Tesla
 D:subghz/assets
+F:1c48964deef36984ec204a2d43fe063b:5503:subghz/Tesla/Better_Tesla_Charge_Port_Opener_433.92MHz_AM270.sub
+F:0cf5506ada74a7e7a3eb7e569709fa25:5503:subghz/Tesla/Better_Tesla_Charge_Port_Opener_433.92MHz_AM650.sub
+F:8b22aa0a2df0b22fc5791a3ecb4fa4fb:10991:subghz/Tesla/Tesla_charge_AM270.sub
+F:7ea28e3ce3c38b2d98ae99aecc45b7b9:11913:subghz/Tesla/Tesla_charge_AM650.sub
 F:dda1ef895b8a25fde57c874feaaef997:650:subghz/assets/came_atomo
 F:50cf77ba8b935ee6cb3b6f111cf2d93d:286:subghz/assets/dangerous_settings
 F:111d2b8df83e27fd889fc5e270297865:3231:subghz/assets/keeloq_mfcodes
