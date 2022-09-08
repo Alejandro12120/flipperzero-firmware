@@ -21,7 +21,7 @@ void nfc_scene_detect_reader_callback(void* context) {
 
 void nfc_scene_detect_reader_on_enter(void* context) {
     notify = furi_record_open(RECORD_NOTIFICATION);
-    
+
     Nfc* nfc = context;
     DOLPHIN_DEED(DolphinDeedNfcEmulate);
 

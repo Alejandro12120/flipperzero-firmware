@@ -178,7 +178,7 @@ static void power_check_charging_state(Power* power) {
 
 static bool power_update_info(Power* power) {
     PowerInfo info;
-	
+
     DesktopSettings* settings = malloc(sizeof(DesktopSettings));
     LOAD_DESKTOP_SETTINGS(settings);
     power->displayBatteryPercentage = settings->displayBatteryPercentage;
