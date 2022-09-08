@@ -100,20 +100,6 @@ void desktop_settings_scene_start_on_enter(void* context) {
     variable_item_set_current_value_index(item, value_index);
     variable_item_set_current_value_text(item, battery_view_count_text[value_index]);
 
-    item = variable_item_list_add(
-        variable_item_list,
-        "Battery View",
-        BATTERY_VIEW_COUNT,
-        desktop_settings_scene_start_battery_view_changed,
-        app);
-
-    value_index = value_index_uint32(
-        app->settings.displayBatteryPercentage,
-        displayBatteryPercentage_value,
-        BATTERY_VIEW_COUNT);
-    variable_item_set_current_value_index(item, value_index);
-    variable_item_set_current_value_text(item, battery_view_count_text[value_index]);
-
     view_dispatcher_switch_to_view(app->view_dispatcher, DesktopSettingsAppViewVarItemList);
 }
 
