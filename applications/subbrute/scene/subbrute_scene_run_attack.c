@@ -277,11 +277,12 @@ void subbrute_scene_run_attack_on_event(SubBruteEvent event, SubBruteState* cont
         if(event.input_type == InputTypeShort) {
             switch(event.key) {
             case InputKeyDown:
+                break;
+            case InputKeyUp:
                 if(!context->is_attacking) {
                     toSave = true;
                     context->current_scene = SceneSaveName;
                 }
-            case InputKeyUp:
                 break;
             case InputKeyLeft:
                 if(!context->is_attacking && context->payload > 0x00) {
@@ -355,7 +356,7 @@ void subbrute_scene_run_attack_on_draw(Canvas* canvas, SubBruteState* context) {
 
     canvas_set_font(canvas, FontSecondary);
     char start_stop_msg[20];
-    snprintf(start_stop_msg, sizeof(start_stop_msg), " Press (V) to save ");
+    snprintf(start_stop_msg, sizeof(start_stop_msg), " Press (^) to save ");
     if(context->is_attacking) {
         elements_button_center(canvas, "Stop");
     } else {
