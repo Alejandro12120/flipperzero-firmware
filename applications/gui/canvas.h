@@ -25,7 +25,7 @@ typedef enum {
     FontSecondary,
     FontKeyboard,
     FontBigNumbers,
-	FontBatteryPercent,
+    FontBatteryPercent,
 
     // Keep last for fonts number calculation
     FontTotalNumber,

@@ -34,32 +34,38 @@ FuriHalSubGhzPreset str_to_preset(string_t preset) {
 void subbrute_emit(SubBruteState* context) {
     //FURI_LOG_D(TAG, string_get_cstr(context->flipper_format_string));
 
-    furi_hal_subghz_start_async_tx(subghz_transmitter_yield, context->transmitter);
-    while(!(furi_hal_subghz_is_async_tx_complete())) {
-        furi_delay_ms(5);
-    }
-
-    furi_hal_subghz_stop_async_tx();
-}
-
-void prepare_emit(SubBruteState* context) {
-    furi_hal_subghz_init();
-
     context->transmitter =
         subghz_transmitter_alloc_init(context->environment, string_get_cstr(context->protocol));
 
+    subghz_transmitter_deserialize(context->transmitter, context->flipper_format);
     furi_hal_subghz_reset();
     furi_hal_subghz_load_preset(str_to_preset(context->preset));
 
-    furi_hal_subghz_set_frequency_and_path(context->frequency);
+    context->frequency_cal = furi_hal_subghz_set_frequency_and_path(context->frequency);
+
+    furi_hal_subghz_start_async_tx(subghz_transmitter_yield, context->transmitter);
+    while(!(furi_hal_subghz_is_async_tx_complete())) {
+        furi_delay_ms(1);
+    }
+
+    furi_hal_subghz_stop_async_tx();
+    subghz_transmitter_stop(context->transmitter);
+    furi_hal_subghz_idle();
+    subghz_transmitter_free(context->transmitter);
+}
+
+void prepare_emit(SubBruteState* context) {
+    UNUSED(context);
+
+    furi_hal_subghz_init();
 }
 
 void clear_emit(SubBruteState* context) {
+    UNUSED(context);
+
     furi_hal_subghz_stop_async_tx();
     furi_hal_subghz_idle();
     furi_hal_subghz_sleep();
-
-    subghz_transmitter_free(context->transmitter);
 }
 /*
 void subbrute_send_raw_packet(SubBruteState* context) {
@@ -166,7 +172,6 @@ void subbrute_send_packet_parsed(SubBruteState* context) {
 
     stream_clean(context->stream);
     stream_write_string(context->stream, context->flipper_format_string);
-    subghz_transmitter_deserialize(context->transmitter, context->flipper_format);
 
     subbrute_emit(context);
 }
@@ -178,6 +183,63 @@ void subbrute_send_packet(SubBruteState* context) {
     subbrute_send_packet_parsed(context);
     //}
     string_clear(context->flipper_format_string);
+}
+
+void subbrute_scene_run_attack_on_exit(SubBruteState* context) {
+    if(!toSave) {
+        clear_emit(context);
+        furi_thread_free(context->bruthread);
+    }
+}
+
+void subbrute_scene_run_attack_on_tick(SubBruteState* context) {
+    if(!context->is_attacking || locked) {
+        return;
+    }
+    //if(0 != subbrute_counter) {
+    locked = true;
+    subbrute_send_packet(context);
+
+    if(context->payload == max_value) {
+        context->payload = 0x00;
+        subbrute_counter = 0;
+        context->is_attacking = false;
+        notification_message(context->notify, &sequence_blink_stop);
+        notification_message(context->notify, &sequence_single_vibro);
+    } else {
+        context->payload++;
+    }
+    locked = false;
+    //}
+    /*if(subbrute_counter > SUBBRUTE_DELAY) {
+        subbrute_counter = 0;
+    } else {
+        subbrute_counter++;
+    }*/
+}
+void subbrute_run_timer(SubBruteState* context) {
+    while(true) {
+        if(context->close_thread_please) {
+            context->is_thread_running = false;
+            break;
+        }
+        //furi_delay_ms(10);
+        subbrute_scene_run_attack_on_tick(context);
+    }
+}
+
+// entrypoint for worker
+static int32_t subbrute_worker_thread(void* ctx) {
+    SubBruteState* app = ctx;
+    subbrute_run_timer(app);
+    return 0;
+}
+
+void start_bruthread(SubBruteState* app) {
+    if(!app->is_thread_running) {
+        furi_thread_start(app->bruthread);
+        app->is_thread_running = true;
+    }
 }
 
 void subbrute_scene_run_attack_on_enter(SubBruteState* context) {
@@ -198,43 +260,15 @@ void subbrute_scene_run_attack_on_enter(SubBruteState* context) {
         context->flipper_format = flipper_format_string_alloc();
         context->stream = flipper_format_get_raw_stream(context->flipper_format);
         context->environment = subghz_environment_alloc();
-        context->transmitter = subghz_transmitter_alloc_init(
-            context->environment, string_get_cstr(context->protocol));
+
         prepare_emit(context);
+        context->bruthread = furi_thread_alloc();
+        furi_thread_set_name(context->bruthread, "SubBrute Worker");
+        furi_thread_set_stack_size(context->bruthread, 2048);
+        furi_thread_set_context(context->bruthread, context);
+        furi_thread_set_callback(context->bruthread, subbrute_worker_thread);
     } else {
         toSave = false;
-    }
-}
-
-void subbrute_scene_run_attack_on_exit(SubBruteState* context) {
-    if(!toSave) {
-        clear_emit(context);
-    }
-}
-
-void subbrute_scene_run_attack_on_tick(SubBruteState* context) {
-    if(!context->is_attacking || locked) {
-        return;
-    }
-    if(0 != subbrute_counter) {
-        locked = true;
-        subbrute_send_packet(context);
-
-        if(context->payload == max_value) {
-            context->payload = 0x00;
-            subbrute_counter = 0;
-            context->is_attacking = false;
-            notification_message(context->notify, &sequence_blink_stop);
-            notification_message(context->notify, &sequence_single_vibro);
-        } else {
-            context->payload++;
-        }
-        locked = false;
-    }
-    if(subbrute_counter > SUBBRUTE_DELAY) {
-        subbrute_counter = 0;
-    } else {
-        subbrute_counter++;
     }
 }
 
@@ -266,16 +300,27 @@ void subbrute_scene_run_attack_on_event(SubBruteEvent event, SubBruteState* cont
             case InputKeyOk:
                 if(!context->is_attacking) {
                     context->is_attacking = true;
+                    start_bruthread(context);
                     notification_message(context->notify, &sequence_blink_start_blue);
                 } else {
                     context->is_attacking = false;
+                    context->close_thread_please = true;
+                    if(context->is_thread_running && context->bruthread) {
+                        furi_thread_join(context->bruthread); // wait until thread is finished
+                    }
+                    context->close_thread_please = false;
                     notification_message(context->notify, &sequence_blink_stop);
                     notification_message(context->notify, &sequence_single_vibro);
                 }
                 break;
             case InputKeyBack:
                 locked = false;
+                context->close_thread_please = true;
                 context->is_attacking = false;
+                if(context->is_thread_running && context->bruthread) {
+                    furi_thread_join(context->bruthread); // wait until thread is finished
+                }
+                context->close_thread_please = false;
                 string_reset(context->notification_msg);
                 context->payload = 0x00;
                 subbrute_counter = 0;
