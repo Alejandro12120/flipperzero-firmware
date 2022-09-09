@@ -66,6 +66,12 @@ Mfkey32* mfkey32_alloc(uint32_t cuid) {
         instance = NULL;
     } else {
         Mfkey32Params_init(instance->params_arr);
+
+        string_t str;
+        string_init_printf(str,
+                           "#Format: cuid <cardUID> <nt0> <nr0> <ar0> <nt1> <nr1> <ar1>\n");
+        stream_write_string(instance->file_stream, str);
+        string_clear(str);
     }
 
     furi_record_close(RECORD_STORAGE);
@@ -94,7 +100,7 @@ static bool mfkey32_write_params(Mfkey32* instance, Mfkey32Params* params) {
     string_t str;
     string_init_printf(
         str,
-        "Sector %d key %c cuid %08x nt0 %08x nr0 %08x ar0 %08x nt1 %08x nr1 %08x ar1 %08x\n",
+        "Sector %d key %c cuid %08x %08x %08x %08x %08x %08x %08x\n",
         params->sector,
         params->key == MfClassicKeyA ? 'A' : 'B',
         params->cuid,
@@ -214,6 +220,7 @@ uint16_t mfkey32_get_auth_sectors(string_t data_str) {
             break;
         while(true) {
             if(!stream_read_line(file_stream, temp_str)) break;
+            if(!string_search_str(temp_str, "#")) continue;
             size_t uid_pos = string_search_str(temp_str, "cuid");
             string_left(temp_str, uid_pos);
             string_push_back(temp_str, '\n');
