@@ -68,8 +68,7 @@ Mfkey32* mfkey32_alloc(uint32_t cuid) {
         Mfkey32Params_init(instance->params_arr);
 
         string_t str;
-        string_init_printf(str,
-                           "#Format: cuid <cardUID> <nt0> <nr0> <ar0> <nt1> <nr1> <ar1>\n");
+        string_init_printf(str, "#Format: cuid <cardUID> <nt0> <nr0> <ar0> <nt1> <nr1> <ar1>\n");
         stream_write_string(instance->file_stream, str);
         string_clear(str);
     }
