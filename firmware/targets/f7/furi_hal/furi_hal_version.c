@@ -257,7 +257,7 @@ uint8_t furi_hal_version_get_hw_body() {
 }
 
 FuriHalVersionColor furi_hal_version_get_hw_color() {
-    return furi_hal_version.board_color;
+    return FuriHalVersionColorBlack;
 }
 
 uint8_t furi_hal_version_get_hw_connect() {
