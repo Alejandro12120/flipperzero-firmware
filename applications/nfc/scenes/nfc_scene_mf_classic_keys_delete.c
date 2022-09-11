@@ -58,7 +58,7 @@ bool nfc_scene_mf_classic_keys_delete_on_event(void* context, SceneManagerEvent 
             MfClassicDict* dict = mf_classic_dict_alloc(MfClassicDictTypeUser);
             if(mf_classic_dict_delete_index(dict, key_index)) {
                 scene_manager_set_scene_state(
-                    nfc->scene_manager, NfcSceneDeleteSuccess, NfcSceneMfClassicKeys);
+                    nfc->scene_manager, NfcSceneDeleteSuccess, NfcSceneMfClassicKeysList);
                 scene_manager_next_scene(nfc->scene_manager, NfcSceneDeleteSuccess);
             } else {
                 scene_manager_search_and_switch_to_previous_scene(
