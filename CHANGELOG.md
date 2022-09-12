@@ -1,7 +1,6 @@
 ### New changes
-* Fix Custom flipper names
-* Arkanoid: Fix - dont allow user to jump after start (PR 64 / by @TQMatvey)
-* Fix subghz starline protocol
+* New update slideshow (by @Svaarich) [(idea and first version by ESurge, see PR 61)](https://github.com/Eng1n33r/flipperzero-firmware/pull/61)
+* Added Brazilian Portuguese badusb keyboard layout (by @web-mancha) (PR 65)
 
 **Note: To avoid issues prefer installing using web updater or by self update package, all needed assets will be installed**
 
