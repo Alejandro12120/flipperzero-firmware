@@ -138,13 +138,25 @@ bool mf_classic_dict_get_next_key(MfClassicDict* dict, uint64_t* key) {
     furi_assert(dict);
     furi_assert(dict->stream);
 
-    string_t temp_key;
-    string_init(temp_key);
-    bool key_read = mf_classic_dict_get_next_key_str(dict, temp_key);
-    if(key_read) {
-        mf_classic_dict_str_to_int(temp_key, key);
+    uint8_t key_byte_tmp = 0;
+    string_t next_line;
+    string_init(next_line);
+
+    bool key_read = false;
+    *key = 0ULL;
+    while(!key_read) {
+        if(!stream_read_line(dict->stream, next_line)) break;
+        if(string_get_char(next_line, 0) == '#') continue;
+        if(string_size(next_line) != NFC_MF_CLASSIC_KEY_LEN) continue;
+        for(uint8_t i = 0; i < 12; i += 2) {
+            args_char_to_hex(
+                string_get_char(next_line, i), string_get_char(next_line, i + 1), &key_byte_tmp);
+            *key |= (uint64_t)key_byte_tmp << 8 * (5 - i / 2);
+        }
+        key_read = true;
     }
-    string_clear(temp_key);
+
+    string_clear(next_line);
     return key_read;
 }
 
@@ -202,12 +214,21 @@ bool mf_classic_dict_add_key(MfClassicDict* dict, uint8_t* key) {
     furi_assert(dict);
     furi_assert(dict->stream);
 
-    string_t temp_key;
-    string_init(temp_key);
-    mf_classic_dict_int_to_str(key, temp_key);
-    bool key_added = mf_classic_dict_add_key_str(dict, temp_key);
+    string_t key_str;
+    string_init(key_str);
+    for(size_t i = 0; i < 6; i++) {
+        string_cat_printf(key_str, "%02X", key[i]);
+    }
+    string_cat_printf(key_str, "\n");
 
-    string_clear(temp_key);
+    bool key_added = false;
+    do {
+        if(!stream_seek(dict->stream, 0, StreamOffsetFromEnd)) break;
+        if(!stream_insert_string(dict->stream, key_str)) break;
+        key_added = true;
+    } while(false);
+
+    string_clear(key_str);
     return key_added;
 }
 
