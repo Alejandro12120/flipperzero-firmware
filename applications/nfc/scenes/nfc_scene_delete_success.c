@@ -27,7 +27,7 @@ bool nfc_scene_delete_success_on_event(void* context, SceneManagerEvent event) {
         if(event.event == NfcCustomEventViewExit) {
             consumed = scene_manager_search_and_switch_to_previous_scene(
                 nfc->scene_manager,
-                scene_manager_get_scene_state(nfc->scene_manager, NfcSceneDeleteSuccess));
+                scene_manager_get_scene_state(nfc->scene_manager, NfcSceneFileSelect));
         }
     }
     return consumed;
