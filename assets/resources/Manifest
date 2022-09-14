@@ -1,5 +1,5 @@
 V:0
-T:1663109628
+T:1663170671
 D:badusb
 D:dolphin
 D:infrared
@@ -256,7 +256,7 @@ D:nfc/assets
 F:81dc04c7b181f94b644079a71476dff4:4742:nfc/assets/aid.nfc
 F:86efbebdf41bb6bf15cc51ef88f069d5:2565:nfc/assets/country_code.nfc
 F:41b4f08774249014cb8d3dffa5f5c07d:1757:nfc/assets/currency_code.nfc
-F:d207504f7a85342249e3048580f4c1cc:51970:nfc/assets/mf_classic_dict.nfc
+F:15003cfb6a92c63c00ce721e9f430476:52088:nfc/assets/mf_classic_dict.nfc
 F:319958d37b2316a2e752ebb856c32524:126:rfidfuzzer/example_uids.txt
 D:subghz/Tesla
 D:subghz/assets
