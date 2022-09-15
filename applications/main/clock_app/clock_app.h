@@ -27,12 +27,15 @@ typedef struct {
     InputEvent input;
 } PluginEvent;
 
+// typedef enum {
+//     Clock,
+//     Timer,
+//     Counter,
+// } Mode;
+
 typedef struct {
     ClockSettings settings;
     FuriHalRtcDateTime datetime;
     FuriMutex* mutex;
     FuriMessageQueue* event_queue;
-    uint32_t timer_start_timestamp;
-    uint32_t timer_stopped_seconds;
-    bool timer_running;
 } ClockState;

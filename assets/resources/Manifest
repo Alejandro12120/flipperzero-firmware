@@ -1,5 +1,5 @@
 V:0
-T:1663248251
+T:1663250412
 D:apps
 D:badusb
 D:dolphin
@@ -15,16 +15,11 @@ D:apps/GPIO
 D:apps/Games
 D:apps/Misc
 D:apps/Tools
-F:8ae2d78ed4f84a51a18dea6b8896f049:5784:apps/GPIO/esp8266_deauth.fap
 F:7d298da2ad515052f81e19838be52992:13744:apps/GPIO/mouse_jacker.fap
-F:68e4c976508900073b61f7cbe752da3e:8620:apps/GPIO/nrf_sniff.fap
 F:5e341708f5200581932c9226f75cd00c:3704:apps/GPIO/sentry_safe.fap
-F:3fba6c87e3089e570589c84728efd90c:13172:apps/GPIO/wifi_marauder.fap
-F:9fffd6939a3c35aa3fb5d11d77a9ac38:11292:apps/GPIO/wifi_scanner.fap
 F:6abb3b73be407fd92cdd10d285643728:5184:apps/Games/arkanoid_game.fap
 F:ea2445591b4824c5753f45a07abe362d:45140:apps/Games/game_doom.fap
 F:fdb698558d49fb2c6a073bdf79b28672:4664:apps/Games/game_flappybird.fap
-F:00f831063ca812c8f9104c56ce4238f4:4872:apps/Games/game_zombiez.fap
 F:4aff16158079098d9875f498485179b6:13148:apps/Games/music_player.fap
 F:33b1088b67c53325ee3297f30d6f77ff:4672:apps/Games/snake_game.fap
 F:bcb9eb665bfe71c52b79ce3b83bff6a1:5852:apps/Games/tetris_game.fap
