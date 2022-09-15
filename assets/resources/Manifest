@@ -1,5 +1,5 @@
 V:0
-T:1663250412
+T:1663251816
 D:apps
 D:badusb
 D:dolphin
@@ -15,7 +15,6 @@ D:apps/GPIO
 D:apps/Games
 D:apps/Misc
 D:apps/Tools
-F:7d298da2ad515052f81e19838be52992:13744:apps/GPIO/mouse_jacker.fap
 F:5e341708f5200581932c9226f75cd00c:3704:apps/GPIO/sentry_safe.fap
 F:6abb3b73be407fd92cdd10d285643728:5184:apps/Games/arkanoid_game.fap
 F:ea2445591b4824c5753f45a07abe362d:45140:apps/Games/game_doom.fap
