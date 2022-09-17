@@ -180,7 +180,7 @@ static bool power_update_info(Power* power) {
     PowerInfo info;
 
     DesktopSettings* settings = malloc(sizeof(DesktopSettings));
-    LOAD_DESKTOP_SETTINGS(settings);
+    DESKTOP_SETTINGS_LOAD(settings);
     power->displayBatteryPercentage = settings->displayBatteryPercentage;
     free(settings);
 
