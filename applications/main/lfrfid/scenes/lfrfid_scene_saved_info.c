@@ -42,8 +42,6 @@ void lfrfid_scene_saved_info_on_enter(void* context) {
 
     widget_add_icon_element(app->widget, 0, 0, &I_RFIDSmallChip_14x14);
 
-    //widget_add_string_multiline_element(widget, 0, 1, AlignLeft, AlignTop, FontSecondary, string_get_cstr(tmp_string));
-
     view_dispatcher_switch_to_view(app->view_dispatcher, LfRfidViewWidget);
     string_clear(tmp_string);
 }
