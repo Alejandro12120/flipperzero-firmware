@@ -22,6 +22,8 @@ after that on web updater page - press `Connect` button
 - And wait, if all flashed successfully - you will have all needed assets pre installed
 - Done
 
+![web_install](https://user-images.githubusercontent.com/10697207/190832212-d27597b5-cf11-4f2e-9b1f-7104710905ee.gif)
+
 <br>
 <br>
 
@@ -32,7 +34,8 @@ after that on web updater page - press `Connect` button
 - Download `flipper-z-f7-update-(version).tgz`
 - Open downloads in ios Files app, select downloaded `.tgz` file, click Share, select Flipper App
 - In flipper app click green `Update` button, be sure it shows `Custom flipper-z-f7-update...` in Update Channel
-- Wait until update is finished
+- Wait until update is finished 
+- Error in ios app will show up, but flipper will be updated successfully
 - And if all flashed successfully - you will have all needed assets pre installed
 - Done
 
@@ -50,38 +53,11 @@ after that on web updater page - press `Connect` button
 - Verify that all files are present on your microSD card
 - After all you need to insert microSD card back into flipper, navigate into filebrowser, open this file 
 `update/f7-update-(CURRENT VERSION)/update.fuf`
-- Update will start, wait for all stages, and when flipper started after update, you can upload any custom [IR libs](https://github.com/logickworkshop/Flipper-IRDB), and other stuff using qFlipper or directly into microSD card
+- Update will start, wait for all stages
+- Done
 
-<br>
-<br>
+![manual_install](https://user-images.githubusercontent.com/10697207/190832689-8fb50d97-2820-4501-b8b7-d8e87a235d45.gif)
 
-## With qFlipper
-
-### **Replace (CURRENT VERSION) with version that you downloaded from releases**
-- Connect your device and select `Update from file`
-then select **`flipper-z-f7-full-(CURRENT VERSION).dfu`**
-
-- And wait, if all flashed successfully - you can manually upload IR libs and other stuff to sd card
-
-- If you doing install for first time or migrating from official fw, unpack files from archive `sd-card-(CURRENT VERSION).zip` onto your microSD card
-
-
-<br>
-<br>
-
-## With USB DFU 
-
-1. Download latest [Firmware](https://github.com/Eng1n33r/flipperzero-firmware/releases)
-
-2. Reboot Flipper to Bootloader
- - Press and hold `← Left` + `↩ Back` for reset 
- - Release `↩ Back` and keep holding `← Left` until blue LED lights up
- - Release `← Left`
-
-### **Replace (CURRENT VERSION) with version that you downloaded from releases**
-3. Run `dfu-util -D flipper-z-f7-full-(CURRENT VERSION).dfu -a 0`
-
-4. If you doing install for first time or migrating from official fw, unpack files from archive `sd-card-(CURRENT VERSION).zip` to your microSD card
 
 <br>
 <br>

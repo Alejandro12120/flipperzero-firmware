@@ -267,7 +267,7 @@ int32_t power_srv(void* p) {
     furi_record_create(RECORD_POWER, power);
 
     DesktopSettings* settings = malloc(sizeof(DesktopSettings));
-    LOAD_DESKTOP_SETTINGS(settings);
+    DESKTOP_SETTINGS_LOAD(settings);
     power->displayBatteryPercentage = settings->displayBatteryPercentage;
     free(settings);
 
@@ -287,7 +287,7 @@ int32_t power_srv(void* p) {
         // Update battery view port
         if(need_refresh) {
             DesktopSettings* settings = malloc(sizeof(DesktopSettings));
-            LOAD_DESKTOP_SETTINGS(settings);
+            DESKTOP_SETTINGS_LOAD(settings);
             power->displayBatteryPercentage = settings->displayBatteryPercentage;
             free(settings);
             view_port_update(power->battery_view_port);
