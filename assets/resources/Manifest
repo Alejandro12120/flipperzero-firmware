@@ -1,5 +1,5 @@
 V:0
-T:1663611724
+T:1663678245
 D:apps
 D:badusb
 D:dolphin
@@ -26,14 +26,14 @@ F:c65c99dc2d25f416bb63f3ccfc88c120:4732:apps/Games/tictactoe_game.fap
 F:d8b896be4bd6511ae5d88c7ae639a50f:6564:apps/Misc/barcode_generator.fap
 F:d5d35eff21760633742f7418f4cb343a:12392:apps/Misc/multi_converter.fap
 F:f3a96069de0568d1bb2e393f997944ec:5256:apps/Misc/uart_echo.fap
-F:0e6b64bb5ece3373d24991ae5dfab144:13148:apps/Music/music_player.fap
-F:5eba546920970fda99413c6d5e3c77c3:10876:apps/Music/wav_player.fap
-F:3f5135f22c41cf57901b0d19598f5a3b:17376:apps/Tools/bt_hid.fap
+F:45587884265346c887ed27729c70ecd9:13148:apps/Music/music_player.fap
+F:cfc58ba7aca2ae14bbc19469d7556c5f:10876:apps/Music/wav_player.fap
+F:dda3706ebfcfc084f2e163a43ec2ca84:17376:apps/Tools/bt_hid.fap
 F:cceb9b6c96b2df4f84a5e5f68fbe15ce:14060:apps/Tools/flipfrid.fap
-F:3bd8c4a49b15e7b2252d08c6d99c6259:39268:apps/Tools/picopass.fap
+F:51af96f77a4bfe642351a37ffae1c5a7:39268:apps/Tools/picopass.fap
 F:38fe3a164d7cbb0072c1b33c3bfc2ebc:10620:apps/Tools/spectrum_analyzer.fap
-F:8c9231e304863931b44ae3263adfe444:12796:apps/Tools/sub_playlist.fap
-F:63417f3ffaab4339950b54d4c2347833:24120:apps/Tools/subbrute.fap
+F:0de86d68df9b58fb09caa688f6265b73:12796:apps/Tools/sub_playlist.fap
+F:7482f9d51c62912961a2fe44aa42076f:24120:apps/Tools/subbrute.fap
 D:badusb/layouts
 F:06486e0b61b5555c52b077c4778e6cc1:956:badusb/Honk.txt
 F:2f2d21843efc9287dc43ccf19f1438d0:5281:badusb/Kiosk-Evasion-Bruteforce.txt
@@ -228,7 +228,7 @@ F:c9b4ab2dafec7a060651df8ffe40f6e0:670:dolphin/L3_Fireplace_128x64/frame_4.bm
 F:781757a06c9174978beaed6f21437ea2:670:dolphin/L3_Fireplace_128x64/frame_5.bm
 F:0711b641874f60e329033796078b8f8a:674:dolphin/L3_Fireplace_128x64/frame_6.bm
 F:b09f090b7deacc9682765020ea3b589d:675:dolphin/L3_Fireplace_128x64/frame_7.bm
-F:25680430b93d9db420a9b8ffba08e019:209:dolphin/L3_Fireplace_128x64/meta.txt
+F:29f2dc47df4d2fc20b6a9202a43a3221:209:dolphin/L3_Fireplace_128x64/meta.txt
 F:2e083023ab65d1f99bba71f9aae6db9a:398:dolphin/L3_Furippa3_128x64/frame_0.bm
 F:8cf20e07d84fd6a1157ba932beca70ea:438:dolphin/L3_Furippa3_128x64/frame_1.bm
 F:018344c951691b7b1d77c1c6729d3e42:559:dolphin/L3_Furippa3_128x64/frame_10.bm
