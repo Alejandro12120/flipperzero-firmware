@@ -36,10 +36,6 @@ bool nfc_scene_mf_classic_keys_add_on_event(void* context, SceneManagerEvent eve
             if(userDict && flipperDict) {
                 if(mf_classic_dict_is_key_present(userDict, nfc->byte_input_store) ||
                    mf_classic_dict_is_key_present(flipperDict, nfc->byte_input_store)) {
-                    scene_manager_set_scene_state(
-                        nfc->scene_manager,
-                        NfcSceneMfClassicKeysWarnDuplicate,
-                        NfcSceneMfClassicKeysAdd);
                     scene_manager_next_scene(
                         nfc->scene_manager, NfcSceneMfClassicKeysWarnDuplicate);
                 } else if(mf_classic_dict_add_key(userDict, nfc->byte_input_store)) {
