@@ -1,5 +1,5 @@
 V:0
-T:1663684272
+T:1663781336
 D:apps
 D:badusb
 D:dolphin
@@ -29,7 +29,7 @@ F:f3a96069de0568d1bb2e393f997944ec:5256:apps/Misc/uart_echo.fap
 F:45587884265346c887ed27729c70ecd9:13148:apps/Music/music_player.fap
 F:cfc58ba7aca2ae14bbc19469d7556c5f:10876:apps/Music/wav_player.fap
 F:dda3706ebfcfc084f2e163a43ec2ca84:17376:apps/Tools/bt_hid.fap
-F:cceb9b6c96b2df4f84a5e5f68fbe15ce:14060:apps/Tools/flipfrid.fap
+F:f336484f8938d9bc6c62afff571ffe08:15092:apps/Tools/flipfrid.fap
 F:51af96f77a4bfe642351a37ffae1c5a7:39268:apps/Tools/picopass.fap
 F:38fe3a164d7cbb0072c1b33c3bfc2ebc:10620:apps/Tools/spectrum_analyzer.fap
 F:0de86d68df9b58fb09caa688f6265b73:12796:apps/Tools/sub_playlist.fap
