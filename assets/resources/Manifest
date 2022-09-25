@@ -1,5 +1,5 @@
 V:0
-T:1664095569
+T:1664095967
 D:apps
 D:badusb
 D:dolphin
@@ -293,8 +293,14 @@ F:86efbebdf41bb6bf15cc51ef88f069d5:2565:nfc/assets/country_code.nfc
 F:41b4f08774249014cb8d3dffa5f5c07d:1757:nfc/assets/currency_code.nfc
 F:15003cfb6a92c63c00ce721e9f430476:52088:nfc/assets/mf_classic_dict.nfc
 F:319958d37b2316a2e752ebb856c32524:126:rfidfuzzer/example_uids.txt
+D:subghz/Jamming
 D:subghz/Tesla
 D:subghz/assets
+F:8c44314052ee07fe080b6ceabefe82b2:486717:subghz/Jamming/Jam_315.00.sub
+F:7d1b5f4676ae0f42bd0564f3b0d260ed:25783:subghz/Jamming/Jam_433.42.sub
+F:f5e5be26704600c063258b5d25181877:25861:subghz/Jamming/Jam_433.92.sub
+F:4861b8e4c9314bbae5effb9edb608c91:25984:subghz/Jamming/Jam_438.90.sub
+F:0b8ea2af3cebf38fcdf362a0cab46d36:26258:subghz/Jamming/Jam_868.35.sub
 F:1c48964deef36984ec204a2d43fe063b:5503:subghz/Tesla/Better_Tesla_Charge_Port_Opener_433.92MHz_AM270.sub
 F:0cf5506ada74a7e7a3eb7e569709fa25:5503:subghz/Tesla/Better_Tesla_Charge_Port_Opener_433.92MHz_AM650.sub
 F:8b22aa0a2df0b22fc5791a3ecb4fa4fb:10991:subghz/Tesla/Tesla_charge_AM270.sub
