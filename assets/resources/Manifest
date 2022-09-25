@@ -1,5 +1,5 @@
 V:0
-T:1663878781
+T:1664095569
 D:apps
 D:badusb
 D:dolphin
@@ -20,6 +20,7 @@ F:05d349a2594589fc5b3b4569413676a9:3704:apps/GPIO/sentry_safe.fap
 F:dc231b206eb53318a8899fa255a17128:5184:apps/Games/arkanoid_game.fap
 F:eeac8d6fb760b7c58a524df10737115f:45116:apps/Games/game_doom.fap
 F:8ab49a3b9801e8d4130508943c69d87f:4664:apps/Games/game_flappybird.fap
+F:670be3bb8b517d53e0d284bc4046bfb0:6416:apps/Games/minesweeper.fap
 F:3e5b4c628bc5a52c9b523f12e4577da5:4672:apps/Games/snake_game.fap
 F:7dcbc5ffe57dbb49323ac0406dd758b9:5852:apps/Games/tetris_game.fap
 F:b3d89f618f4be5343d2938c9cfe88a33:4732:apps/Games/tictactoe_game.fap
