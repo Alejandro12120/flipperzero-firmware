@@ -1,5 +1,5 @@
 V:0
-T:1664095967
+T:1664282492
 D:apps
 D:badusb
 D:dolphin
@@ -32,9 +32,9 @@ F:29d264dddd1eb9b411be6570ec3f6f82:10876:apps/Music/wav_player.fap
 F:21bd1f164659630c2cafafaa026a230c:17376:apps/Tools/bt_hid.fap
 F:e94073bb9bcb172791f73b669b90542d:15092:apps/Tools/flipfrid.fap
 F:cba63f8c751e30416c7f4c22e7b1f522:39268:apps/Tools/picopass.fap
-F:601e019ed32eb585a8674c4ef78032e5:10620:apps/Tools/spectrum_analyzer.fap
-F:0645dccb2c037d18f3cf5c24826c25b9:12796:apps/Tools/sub_playlist.fap
-F:0744324e0943d5fe95f302a2b1e70802:24120:apps/Tools/subbrute.fap
+F:b981cf0629bc2c550c0610f5ddeecb1c:10620:apps/Tools/spectrum_analyzer.fap
+F:ee964063d4a07a1c1f6d09fd97f8e0fd:12796:apps/Tools/sub_playlist.fap
+F:2d239dbf9ce89d6f7f11700b0fbf5b03:35812:apps/Tools/subbrute.fap
 D:badusb/layouts
 F:06486e0b61b5555c52b077c4778e6cc1:956:badusb/Honk.txt
 F:2f2d21843efc9287dc43ccf19f1438d0:5281:badusb/Kiosk-Evasion-Bruteforce.txt
@@ -281,11 +281,11 @@ F:33b8fde22f34ef556b64b77164bc19b0:578:dolphin/L3_Lab_research_128x54/frame_8.bm
 F:f267f0654781049ca323b11bb4375519:581:dolphin/L3_Lab_research_128x54/frame_9.bm
 F:41106c0cbc5144f151b2b2d3daaa0527:727:dolphin/L3_Lab_research_128x54/meta.txt
 D:infrared/assets
-F:91a00f2f1757da09d8a25aeb91bfb3cc:163158:infrared/assets/ac.ir
-F:afe41f5276b342ba8b52ffe6403def6d:61481:infrared/assets/audio.ir
-F:4b5f6c904671eb8e56170a17e87fa913:90528:infrared/assets/fans.ir
+F:0f63b3e2bfbcc469d48c0c9c76d55a13:163241:infrared/assets/ac.ir
+F:60e1bbb6a9ce338540db5fb037557466:63074:infrared/assets/audio.ir
+F:ed65f1658e43959b9bd2ccb0bfc12ca7:98767:infrared/assets/fans.ir
 F:51d5cc9710ef0c6639985213a822e90a:9617:infrared/assets/projectors.ir
-F:5e366907e54fed00912540776745ae6e:149433:infrared/assets/tv.ir
+F:d682ebc13b72b4ff2c49d07521b8aa82:157177:infrared/assets/tv.ir
 F:a157a80f5a668700403d870c23b9567d:470:music_player/Marble_Machine.fmf
 D:nfc/assets
 F:81dc04c7b181f94b644079a71476dff4:4742:nfc/assets/aid.nfc
