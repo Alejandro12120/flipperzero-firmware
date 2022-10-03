@@ -14,6 +14,7 @@
 
 #define ASSETS_DIR "assets"
 #define BADUSB_LAYOUTS_DIR "layouts"
+#define NFC_CACHE_DIR "cache"
 #define SUBGHZ_TEMP_DIR "tmp_history"
 #define BROWSER_ROOT STORAGE_ANY_PATH_PREFIX
 #define FILE_NAME_LEN_MAX 256
@@ -82,7 +83,8 @@ static bool browser_filter_by_name(BrowserWorker* browser, string_t name, bool i
         if(browser->skip_assets) {
             return ((string_cmp_str(name, ASSETS_DIR) == 0) ? (false) : (true)) &&
                    ((string_cmp_str(name, BADUSB_LAYOUTS_DIR) == 0) ? (false) : (true)) &&
-                   ((string_cmp_str(name, SUBGHZ_TEMP_DIR) == 0) ? (false) : (true));
+                   ((string_cmp_str(name, SUBGHZ_TEMP_DIR) == 0) ? (false) : (true) &&
+                   ((string_cmp_str(name, NFC_CACHE_DIR) == 0) ? (false) : (true)));
         } else {
             return true;
         }

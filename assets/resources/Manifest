@@ -1,5 +1,5 @@
 V:0
-T:1664527854
+T:1664823413
 D:apps
 D:badusb
 D:dolphin
@@ -35,8 +35,8 @@ F:9303a5e5a3ef4e79a6acde3feab18cf2:39268:apps/Tools/Picopass.fap
 F:da9470a18725c5184393c4214025ca37:15096:apps/Tools/RFID_Fuzzer.fap
 F:0ba1735d16b2481c83df91d54be38e1e:10244:apps/Tools/Signal_Generator.fap
 F:f384093240c394e61b51bb1a6b491750:10620:apps/Tools/Spectrum_Analyzer.fap
-F:494a7d4d443c077bb8b5244d58d1069a:35656:apps/Tools/SubGHz_Bruteforcer.fap
-F:2faa0ae49793246d947a3fe2c4c01e67:12800:apps/Tools/SubGHz_Playlist.fap
+F:ebfda5e4b75e8536a10ae9e4754b8304:35656:apps/Tools/SubGHz_Bruteforcer.fap
+F:1a1e12b1a3c7daff2dc680ec04b3923b:12800:apps/Tools/SubGHz_Playlist.fap
 D:badusb/layouts
 F:06486e0b61b5555c52b077c4778e6cc1:956:badusb/Honk.txt
 F:2f2d21843efc9287dc43ccf19f1438d0:5281:badusb/Kiosk-Evasion-Bruteforce.txt
