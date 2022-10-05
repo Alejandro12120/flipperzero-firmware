@@ -7,7 +7,7 @@ fi
 
 export DIST_SUFFIX=slow-cfw
 
-./fbt COMPACT=1 DEBUG=0 updater_package -c
+#./fbt COMPACT=1 DEBUG=0 updater_package -c
 ./fbt COMPACT=1 DEBUG=0 updater_package
 if [[ $? -eq 0 ]]; then 
     cd dist/f7-C
