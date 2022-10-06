@@ -18,7 +18,7 @@ void lfrfid_scene_saved_info_on_enter(void* context) {
     widget_add_string_element(
         widget, 16, 3, AlignLeft, AlignTop, FontPrimary, furi_string_get_cstr(tmp_string));
 
-    furi_string_free(tmp_string);
+    furi_string_reset(tmp_string);
     size_t size = protocol_dict_get_data_size(app->dict, app->protocol_id);
     uint8_t* data = (uint8_t*)malloc(size);
     protocol_dict_get_data(app->dict, app->protocol_id, data, size);
@@ -33,7 +33,7 @@ void lfrfid_scene_saved_info_on_enter(void* context) {
 
     FuriString* render_data;
     render_data = furi_string_alloc();
-    protocol_dict_render_data(app->dict, render_data, app->protocol_id);
+    protocol_dict_render_brief_data(app->dict, render_data, app->protocol_id);
     furi_string_cat_printf(tmp_string, "\r\n%s", furi_string_get_cstr(render_data));
     furi_string_free(render_data);
 

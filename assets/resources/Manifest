@@ -1,5 +1,5 @@
 V:0
-T:1665080625
+T:1665082704
 D:apps
 D:badusb
 D:dolphin
@@ -23,7 +23,7 @@ F:4357bcf76dcb88002f6dd0d1cf42d87b:4660:apps/Games/FlappyBird.fap
 F:d3cfb788b4af607f50849f57ba138e70:4664:apps/Games/Snake.fap
 F:022cc4115d181af598b74c47c4ebadf1:5848:apps/Games/Tetris.fap
 F:107774ee3d2485d4e538d7ed23cbdf8e:4724:apps/Games/TicTacToe.fap
-F:6417aa311970595eba67488132d1ad70:6604:apps/Games/minesweeper.fap
+F:44c645ea2acaa42b4f07ab64610a6cdf:6636:apps/Games/minesweeper.fap
 F:494303bc111f22dac08418e605f04015:6564:apps/Misc/Barcode_Generator.fap
 F:9942be0918ba2ecf26e9c91bef95b16c:12392:apps/Misc/Multi_Converter.fap
 F:fc44780e125181a3b8ebdc2ff96efdb5:5312:apps/Misc/UART_Echo.fap
