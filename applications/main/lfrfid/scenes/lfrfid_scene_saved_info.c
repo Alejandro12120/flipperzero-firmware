@@ -16,9 +16,9 @@ void lfrfid_scene_saved_info_on_enter(void* context) {
         protocol_dict_get_name(app->dict, app->protocol_id));
 
     widget_add_string_element(
-        widget, 16, 3, AlignLeft, AlignTop, FontPrimary, string_get_cstr(tmp_string));
+        widget, 16, 3, AlignLeft, AlignTop, FontPrimary, furi_string_get_cstr(tmp_string));
 
-    string_reset(tmp_string);
+    furi_string_free(tmp_string);
     size_t size = protocol_dict_get_data_size(app->dict, app->protocol_id);
     uint8_t* data = (uint8_t*)malloc(size);
     protocol_dict_get_data(app->dict, app->protocol_id, data, size);

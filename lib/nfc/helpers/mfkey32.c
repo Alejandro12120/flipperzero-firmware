@@ -70,7 +70,7 @@ Mfkey32* mfkey32_alloc(uint32_t cuid) {
         FuriString* str;
         str = furi_string_alloc_printf("#Format: cuid <cardUID> <nt0> <nr0> <ar0> <nt1> <nr1> <ar1>\n");
         stream_write_string(instance->file_stream, str);
-        string_clear(str);
+        furi_string_free(str);
     }
 
     furi_record_close(RECORD_STORAGE);
