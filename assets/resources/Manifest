@@ -1,5 +1,5 @@
 V:0
-T:1665082704
+T:1665146854
 D:apps
 D:badusb
 D:dolphin
@@ -30,7 +30,7 @@ F:fc44780e125181a3b8ebdc2ff96efdb5:5312:apps/Misc/UART_Echo.fap
 F:d2ad042944237956c095b25dc0a34c09:16924:apps/Misc/totp.fap
 F:6b92fa5361a42dc4ab387d4f7ec572e7:12920:apps/Music/Music_Player.fap
 F:f842e86ed25b936d8474e7b427b50473:10944:apps/Music/WAV_Player.fap
-F:43b8e3de4fe48c2fc67c7520e90cbccf:17384:apps/Tools/Bluetooth_Remote.fap
+F:9df3f246486537eebc25261f174d24b0:17460:apps/Tools/Bluetooth_Remote.fap
 F:c9ed9cbae33ba860ecaf661a43bba151:37852:apps/Tools/Picopass.fap
 F:6db88ef8cb184a226c7ea3301839f193:16292:apps/Tools/RFID_Fuzzer.fap
 F:c6e666da2aa5c37a0aeb9f06ffe11dbf:10328:apps/Tools/Signal_Generator.fap
