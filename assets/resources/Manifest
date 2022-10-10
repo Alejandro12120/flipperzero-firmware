@@ -1,5 +1,5 @@
 V:0
-T:1665345304
+T:1665427079
 D:apps
 D:badusb
 D:dolphin
@@ -26,14 +26,14 @@ F:cdf1c3386df1c185bf9721a2a389c9b6:4724:apps/Games/TicTacToe.fap
 F:0cbc5283cad03f700eeff380e91d16a6:6624:apps/Games/minesweeper.fap
 F:f8d53cb791beb00d98e868e72629af93:6564:apps/Misc/Barcode_Generator.fap
 F:4e674f14771c9b4d293c4a888ee90a39:12392:apps/Misc/Multi_Converter.fap
-F:bb17136b3570b0e3ea76206dbae0bbb6:5080:apps/Misc/UART_Echo.fap
+F:980d1ec8a15f4f216937f97abe0d9ca7:5080:apps/Misc/UART_Echo.fap
 F:b7d4e7899898628ca7bac12bf9a6cd4c:14724:apps/Misc/USB_Keyboard.fap
 F:a5c95ec1f8d5b93aa5f447c46f0f6571:16924:apps/Misc/totp.fap
 F:1bd12e8b0c89aad7c8a9c22dc355ab52:13096:apps/Music/Music_Player.fap
 F:d72f734d340cd82f9ad0995000f7b4e7:10104:apps/Music/WAV_Player.fap
 F:1fc23d036c6553e2b84dfdb3065efb90:16072:apps/Tools/Bluetooth_Remote.fap
 F:ee5654f1d87ac63bc0e7215c5c12d488:37852:apps/Tools/Picopass.fap
-F:cf3f2e57bcac9b27a3c2163961acb991:16292:apps/Tools/RFID_Fuzzer.fap
+F:d71a2c6bf5932754a7416415129b285d:16320:apps/Tools/RFID_Fuzzer.fap
 F:4dda93c5bb19f5f47e4bf8022d4fe11d:9732:apps/Tools/Signal_Generator.fap
 F:5b6cc6d2aed21b18f380c245b4a3f73f:10608:apps/Tools/Spectrum_Analyzer.fap
 F:164b20738030668e0fbdcf9497c329a3:32216:apps/Tools/SubGHz_Bruteforcer.fap
@@ -43,7 +43,6 @@ F:06486e0b61b5555c52b077c4778e6cc1:956:badusb/Honk.txt
 F:2f2d21843efc9287dc43ccf19f1438d0:5281:badusb/Kiosk-Evasion-Bruteforce.txt
 F:ddab5ba6106dad4778f61dc63285ec2b:923:badusb/Mario-head.txt
 F:fcc643ef9e89a26f2a662ebf0b8de3df:1157:badusb/ProMoan.txt
-F:ede97acd2bec1f01d510bcd1811b0fa2:1553:badusb/demo_windows.txt
 F:1139810f61ec7f8c8fe0398d92578b31:256:badusb/layouts/da-DA.kl
 F:13504463372b269bd102c68725921d90:256:badusb/layouts/de-CH.kl
 F:f392e25a23f50691b5a37e67845dec76:256:badusb/layouts/de-DE.kl
@@ -73,6 +72,7 @@ D:dolphin/L1_Read_books_128x64
 D:dolphin/L1_Recording_128x51
 D:dolphin/L1_Sleep_128x64
 D:dolphin/L1_Waves_128x50
+D:dolphin/L2_FlipperCity_128x64
 D:dolphin/L2_Furippa2_128x64
 D:dolphin/L2_Hacking_pc_128x64
 D:dolphin/L2_Soldering_128x64
@@ -80,7 +80,7 @@ D:dolphin/L3_Fireplace_128x64
 D:dolphin/L3_Furippa3_128x64
 D:dolphin/L3_Hijack_radio_128x64
 D:dolphin/L3_Lab_research_128x54
-F:cd713127eaf1b718e2e9991198c52739:1659:dolphin/manifest.txt
+F:2ea4a8a7c466816c89f87fd6c4050986:1757:dolphin/manifest.txt
 F:d37be8444102ec5cde5fe3a85d55b57d:481:dolphin/L1_Boxing_128x64/frame_0.bm
 F:54fb07443bc153ded9589b74d23b4263:461:dolphin/L1_Boxing_128x64/frame_1.bm
 F:e007afe130d699c715b99ce8e5b407bd:531:dolphin/L1_Boxing_128x64/frame_2.bm
@@ -189,6 +189,17 @@ F:c9fc5127e1d8a4217b6b177716725ba0:448:dolphin/L1_Waves_128x50/frame_1.bm
 F:8e0797bf26d5d8d3cbeb99798c222b80:463:dolphin/L1_Waves_128x50/frame_2.bm
 F:da02b1deb3119b31f2b8f182d5bf3242:472:dolphin/L1_Waves_128x50/frame_3.bm
 F:8e6fb4133acbda7e5bb9adad0aed306c:620:dolphin/L1_Waves_128x50/meta.txt
+F:62fc587c94c4e02fbe1014bfc87f65c2:799:dolphin/L2_FlipperCity_128x64/frame_0.bm
+F:b9a908e88b9761a0ad99cfc0a369de6e:799:dolphin/L2_FlipperCity_128x64/frame_1.bm
+F:25388167011c0f7b732e5224096d9441:800:dolphin/L2_FlipperCity_128x64/frame_2.bm
+F:1e7a8b88ec86c1d2bb6fa2f7e2dc5e11:800:dolphin/L2_FlipperCity_128x64/frame_3.bm
+F:59cbb5079a74fc5caff7ff492a186a7b:800:dolphin/L2_FlipperCity_128x64/frame_4.bm
+F:39808d481efe80ea13a31a9d12aa3181:802:dolphin/L2_FlipperCity_128x64/frame_5.bm
+F:c57db8f9ca1c44d0f7b1e56d1c47a159:804:dolphin/L2_FlipperCity_128x64/frame_6.bm
+F:3dbae3d955d248a71314d8140e5632d6:802:dolphin/L2_FlipperCity_128x64/frame_7.bm
+F:cdff3c7177f6abfe02975732653b6471:802:dolphin/L2_FlipperCity_128x64/frame_8.bm
+F:bf8d6607953cb89d441a8334721bb079:802:dolphin/L2_FlipperCity_128x64/frame_9.bm
+F:7a8005426ee22610d5aa027d3d291f9d:214:dolphin/L2_FlipperCity_128x64/meta.txt
 F:be80d2fa903e3250b69c063a1eef0621:350:dolphin/L2_Furippa2_128x64/frame_0.bm
 F:9e628f5e154f12d6c57b13befed1f5f6:385:dolphin/L2_Furippa2_128x64/frame_1.bm
 F:80b48a77682b853e6236cd1c89083e6f:465:dolphin/L2_Furippa2_128x64/frame_10.bm
