@@ -44,13 +44,16 @@ Our Discord Community:
 Also check changelog in releases for latest updates!
 
 ### Current modified and new SubGHz protocols list:
-- HCS101
-- An-Motors
+- Keeloq [Not ALL systems supported for decode or emulation yet!] - [Supported manufacturers list](https://0bin.net/paste/VwR2lNJY#WH9vnPgvcp7w6zVKucFCuNREKAcOij8KsJ6vqLfMn3b)
+- Keeloq: HCS101
+- Keeloq: An-Motors
+- Keeloq: JCM Tech
+- Keeloq: MHouse
+- Keeloq: Nice Smilo
 - CAME Atomo
-- FAAC SLH (Spa) [External seed calculation required]
-- BFT Mitto [External seed calculation required]
-- Keeloq [Not ALL systems supported yet!]
 - Nice Flor S
+- FAAC SLH (Spa) [External seed calculation required (For info conatct me in Discord: Nano#8998)] 
+- BFT Mitto [External seed calculation required (For info conatct me in Discord: Nano#8998)] 
 - Security+ v1 & v2
 - Star Line (saving only)
 
@@ -79,6 +82,8 @@ Also check changelog in releases for latest updates!
 - `Excluded from releases` - WiFi Scanner plugin [(by SequoiaSan)](https://github.com/SequoiaSan/FlipperZero-WiFi-Scanner_Module)
 - `Excluded from releases` - ESP32: WiFi Marauder companion plugin [(by 0xchocolate)](https://github.com/0xchocolate/flipperzero-firmware-with-wifi-marauder-companion)
 - `Excluded from releases` - NRF24: Sniffer & MouseJacker (with changes) [(by mothball187)](https://github.com/mothball187/flipperzero-nrf24/tree/main/mousejacker)
+- Metronome [(by panki27)](https://github.com/panki27/Metronome)
+- **TOTP (Authenticator)** [(by akopachov)](https://github.com/akopachov/flipper-zero_authenticator)
 
 Games:
 - DOOM (fixed) [(By p4nic4ttack)](https://github.com/p4nic4ttack/doom-flipper-zero/)
@@ -87,6 +92,7 @@ Games:
 - Arkanoid (refactored by xMasterX) [(by gotnull)](https://github.com/gotnull/flipperzero-firmware-wPlugins)
 - Tic Tac Toe (refactored by xMasterX) [(by gotnull)](https://github.com/gotnull/flipperzero-firmware-wPlugins)
 - Tetris (with fixes) [(by jeffplang)](https://github.com/jeffplang/flipperzero-firmware/tree/tetris_game/applications/tetris_game)
+- Minesweeper [(by panki27)](https://github.com/panki27/minesweeper)
 
 ### Other changes
 
@@ -111,6 +117,8 @@ Games:
 ## [- 🎲 Download Extra plugins for Unleashed](https://github.com/UberGuidoZ/Flipper/tree/main/Applications/Unleashed)
 
 ## [- Configure Sub-GHz Remote App](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/SubGHzRemotePlugin.md)
+
+## [- TOTP (Authenticator) config description](https://github.com/akopachov/flipper-zero_authenticator/blob/master/.github/conf-file_description.md)
 
 ## [- Barcode Generator](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/BarcodeGenerator.md)
 

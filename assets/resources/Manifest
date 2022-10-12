@@ -1,5 +1,5 @@
 V:0
-T:1665427079
+T:1665465494
 D:apps
 D:badusb
 D:dolphin
@@ -33,10 +33,10 @@ F:1bd12e8b0c89aad7c8a9c22dc355ab52:13096:apps/Music/Music_Player.fap
 F:d72f734d340cd82f9ad0995000f7b4e7:10104:apps/Music/WAV_Player.fap
 F:1fc23d036c6553e2b84dfdb3065efb90:16072:apps/Tools/Bluetooth_Remote.fap
 F:ee5654f1d87ac63bc0e7215c5c12d488:37852:apps/Tools/Picopass.fap
-F:d71a2c6bf5932754a7416415129b285d:16320:apps/Tools/RFID_Fuzzer.fap
+F:58f4abb832b6edc4c2801db081f3c66a:16320:apps/Tools/RFID_Fuzzer.fap
 F:4dda93c5bb19f5f47e4bf8022d4fe11d:9732:apps/Tools/Signal_Generator.fap
 F:5b6cc6d2aed21b18f380c245b4a3f73f:10608:apps/Tools/Spectrum_Analyzer.fap
-F:164b20738030668e0fbdcf9497c329a3:32216:apps/Tools/SubGHz_Bruteforcer.fap
+F:c0d64498bd6031ed7b009eb5cb3882cb:35796:apps/Tools/SubGHz_Bruteforcer.fap
 F:f2c470c6371cd0e8c53bb0417f474d3a:12264:apps/Tools/SubGHz_Playlist.fap
 D:badusb/layouts
 F:06486e0b61b5555c52b077c4778e6cc1:956:badusb/Honk.txt
