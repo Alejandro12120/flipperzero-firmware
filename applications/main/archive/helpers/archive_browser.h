@@ -3,8 +3,9 @@
 #include "../archive_i.h"
 #include <storage/storage.h>
 
-#define TAB_RIGHT InputKeyRight // Default tab swith direction
+#define TAB_RIGHT InputKeyLeft // Default tab swith direction
 #define TAB_DEFAULT ArchiveTabFavorites // Start tab
+#define TAB_BROWSER ArchiveTabBrowser
 #define FILE_LIST_BUF_LEN 100
 
 static const char* tab_default_paths[] = {
