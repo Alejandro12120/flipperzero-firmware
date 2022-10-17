@@ -1,5 +1,5 @@
 V:0
-T:1665763789
+T:1665819719
 D:apps
 D:badusb
 D:dolphin
@@ -20,7 +20,7 @@ F:4f229d254ba248db9c4470561d822260:3708:apps/GPIO/GPIO_Sentry_Safe.fap
 F:4fa17ef6296c2c46e75b00b6f6d7f06d:5252:apps/Games/Arkanoid.fap
 F:2954e25e1773e32aa12df73bf2f6a5ae:45112:apps/Games/DOOM.fap
 F:6b33040cc4f4e40182ec19b7c748f7fd:4660:apps/Games/FlappyBird.fap
-F:5d148919e581eec1121ecaeb1bb32e69:6804:apps/Games/Minesweeper.fap
+F:0d6a29a2082dfa1b87d9dd096e2b5cad:6808:apps/Games/Minesweeper.fap
 F:325669233d7c1293f9c82be8ce16ab2a:5200:apps/Games/Snake.fap
 F:c3bfe866550b4d4260cec3a1ef8d1654:5848:apps/Games/Tetris.fap
 F:cdf1c3386df1c185bf9721a2a389c9b6:4724:apps/Games/TicTacToe.fap
@@ -36,7 +36,7 @@ F:d72f734d340cd82f9ad0995000f7b4e7:10104:apps/Music/WAV_Player.fap
 F:b3a8cc54596c9313ee118c595dca1a9a:20600:apps/Tools/Bluetooth_Remote.fap
 F:c010d73556b4289f5a01f1cbef69eff8:37852:apps/Tools/Picopass.fap
 F:58f4abb832b6edc4c2801db081f3c66a:16320:apps/Tools/RFID_Fuzzer.fap
-F:4dda93c5bb19f5f47e4bf8022d4fe11d:9732:apps/Tools/Signal_Generator.fap
+F:11dea659c0f9a1a668608fa764a08faf:9732:apps/Tools/Signal_Generator.fap
 F:5b6cc6d2aed21b18f380c245b4a3f73f:10608:apps/Tools/Spectrum_Analyzer.fap
 F:dc2509f05c5d8eb2587c1b03243b6450:35796:apps/Tools/SubGHz_Bruteforcer.fap
 F:5c04d3e4ffb8e1e74ec59cb3acf0b78f:12264:apps/Tools/SubGHz_Playlist.fap

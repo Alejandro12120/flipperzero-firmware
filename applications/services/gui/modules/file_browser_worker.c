@@ -82,8 +82,10 @@ static bool browser_filter_by_name(BrowserWorker* browser, FuriString* name, boo
         if(browser->skip_assets) {
             return ((furi_string_cmp_str(name, ASSETS_DIR) == 0) ? (false) : (true)) &&
                    ((furi_string_cmp_str(name, BADUSB_LAYOUTS_DIR) == 0) ? (false) : (true)) &&
-                   ((furi_string_cmp_str(name, SUBGHZ_TEMP_DIR) == 0) ? (false) : (true) &&
-                   ((furi_string_cmp_str(name, NFC_CACHE_DIR) == 0) ? (false) : (true)));
+                   ((furi_string_cmp_str(name, SUBGHZ_TEMP_DIR) == 0) ?
+                        (false) :
+                        (true) &&
+                            ((furi_string_cmp_str(name, NFC_CACHE_DIR) == 0) ? (false) : (true)));
         } else {
             return true;
         }
