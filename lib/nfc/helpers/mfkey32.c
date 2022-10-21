@@ -66,12 +66,6 @@ Mfkey32* mfkey32_alloc(uint32_t cuid) {
         instance = NULL;
     } else {
         Mfkey32Params_init(instance->params_arr);
-
-        FuriString* str;
-        str = furi_string_alloc_printf(
-            "#Format: cuid <cardUID> <nt0> <nr0> <ar0> <nt1> <nr1> <ar1>\n");
-        stream_write_string(instance->file_stream, str);
-        furi_string_free(str);
     }
 
     furi_record_close(RECORD_STORAGE);
@@ -98,7 +92,7 @@ void mfkey32_set_callback(Mfkey32* instance, Mfkey32ParseDataCallback callback, 
 
 static bool mfkey32_write_params(Mfkey32* instance, Mfkey32Params* params) {
     FuriString* str = furi_string_alloc_printf(
-        "Sec %d key %c cuid %08lx %08lx %08lx %08lx %08lx %08lx %08lx\n",
+        "Sec %d key %c cuid %08lx nt0 %08lx nr0 %08lx ar0 %08lx nt1 %08lx nr1 %08lx ar1 %08lx\n",
         params->sector,
         params->key == MfClassicKeyA ? 'A' : 'B',
         params->cuid,
