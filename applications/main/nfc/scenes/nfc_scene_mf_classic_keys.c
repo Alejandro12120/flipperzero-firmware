@@ -60,7 +60,9 @@ bool nfc_scene_mf_classic_keys_on_event(void* context, SceneManagerEvent event) 
         } else if(event.event == GuiButtonTypeLeft) {
             scene_manager_previous_scene(nfc->scene_manager);
             consumed = true;
-        } else if(event.event == GuiButtonTypeRight && (scene_manager_get_scene_state(nfc->scene_manager, NfcSceneMfClassicKeys) > 0)) {
+        } else if(
+            event.event == GuiButtonTypeRight &&
+            (scene_manager_get_scene_state(nfc->scene_manager, NfcSceneMfClassicKeys) > 0)) {
             scene_manager_next_scene(nfc->scene_manager, NfcSceneMfClassicKeysList);
             consumed = true;
         }
