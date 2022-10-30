@@ -64,6 +64,8 @@ Also check changelog in releases for latest updates!
 ## Support us so we can buy equipment and develop new features
 * Boosty: https://boosty.to/mmxdev
 * destream (100 EUR min): https://destream.net/live/MMX/donate
+* USDT(TRC20): `TSXcitMSnWXUFqiUfEXrTVpVewXy2cYhrs`
+* BCH: `qquxfyzntuqufy2dx0hrfr4sndp0tucvky4sw8qyu3`
 * ETH/BSC/ERC20-Tokens: `0xFebF1bBc8229418FF2408C07AF6Afa49152fEc6a`
 * BTC: `bc1q0np836jk9jwr4dd7p6qv66d04vamtqkxrecck9`
 * DOGE: `D6R6gYgBn5LwTNmPyvAQR6bZ9EtGgFCpvv`
@@ -126,7 +128,7 @@ Games:
 
 ### **Plugins**
 
-## [- 🎲 Download Extra plugins for Unleashed](https://github.com/UberGuidoZ/Flipper/tree/main/Applications/Unleashed%20(and%20RogueMaster))
+## [- 🎲 Download Extra plugins for Unleashed](https://github.com/xMasterX/unleashed-extra-pack)
 
 ## [- Configure Sub-GHz Remote App](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/SubGHzRemotePlugin.md)
 
