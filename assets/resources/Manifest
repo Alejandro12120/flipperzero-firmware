@@ -1,5 +1,5 @@
 V:0
-T:1667056632
+T:1667395915
 D:apps
 D:badusb
 D:dolphin
@@ -20,6 +20,7 @@ F:20f0685510ec8ee3813df02993415c7a:3780:apps/GPIO/GPIO_Sentry_Safe.fap
 F:3d8b1eeded57924d42e9c915d1cea254:9944:apps/GPIO/gps_nmea.fap
 F:09aafc06b1da810e03cd471256b1f7d1:6108:apps/GPIO/hc_sr04.fap
 F:66809cb45a2d580baa9fdd36f5fac42a:10828:apps/GPIO/i2cTools.fap
+F:d175fbfb5ff113731e96cdb190d630d0:16692:apps/GPIO/quenon_dht_mon.fap
 F:38973279fd3de3694b3abcda33415b98:14084:apps/GPIO/temperature_sensor.fap
 F:285b8cb03ec7833bf4c4d3bd3912045f:5252:apps/Games/Arkanoid.fap
 F:58c608fc4c830235061992a4b9a9d7c8:45112:apps/Games/DOOM.fap
@@ -32,11 +33,12 @@ F:8cfb81d1502a8b5edd5f82e6e1dca1e8:16512:apps/Games/heap_defence.fap
 F:4db31a9c9eb99492b964c2ea9c01d1a8:6564:apps/Misc/Barcode_Generator.fap
 F:73819fa584169d2aeca76c98790fdd8b:12392:apps/Misc/Multi_Converter.fap
 F:c0e8a414e10923513fa2e3dbcf6342c5:5084:apps/Misc/UART_Echo.fap
-F:a35c0a99018dfee69719edf4a4f4c9f4:17644:apps/Misc/USB_Keyboard.fap
+F:b0e5ba69e96261a2c7ef6b3c17302b26:18092:apps/Misc/USB_Keyboard.fap
 F:51da8de926aa45d3ff8f8c1205e2b873:99264:apps/Misc/totp.fap
 F:f4ed22e98456e554966904c0dc1e8002:10616:apps/Music/Metronome.fap
 F:c67b15d2ab23959591b06ed5ff06a3ee:13256:apps/Music/Music_Player.fap
 F:e5370691f7c60ede288b231a2c16c5c0:10296:apps/Music/WAV_Player.fap
+F:7d018a067c19f0df5b145f18abdd44f3:6764:apps/Music/morse_code.fap
 F:e2a4ed43ba665a01f7cbdd0d362cb241:22132:apps/Tools/Bluetooth_Remote.fap
 F:2c0b5fab03abe2f2032163f07aaf8be6:44416:apps/Tools/Picopass.fap
 F:2a9103e91e7dbe10c70e38109435ea60:16504:apps/Tools/RFID_Fuzzer.fap
@@ -48,6 +50,7 @@ F:6009df5b0cdb2dcd1f153aafb961e545:37664:apps/Tools/dap_link.fap
 F:f73c56e7d2ee8eea3deb5212d1f43af5:27236:apps/Tools/dtmf_dolphin.fap
 F:eebda06353219f7a9821d08733baeb93:50704:apps/Tools/weather_station.fap
 D:badusb/layouts
+F:835f2cbe42cd77bb235f52b9baa78655:508:badusb/Discord.txt
 F:06486e0b61b5555c52b077c4778e6cc1:956:badusb/Honk.txt
 F:2f2d21843efc9287dc43ccf19f1438d0:5281:badusb/Kiosk-Evasion-Bruteforce.txt
 F:ddab5ba6106dad4778f61dc63285ec2b:923:badusb/Mario-head.txt
