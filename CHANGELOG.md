@@ -1,30 +1,13 @@
 ### New changes
-* Plugins: SubGHz Bruteforcer -> Add support for Ansonic 12bit protocol (FM238)
-* Plugins: Fix DTMF Dolphin -> Add forgotten scene and menu item
-* Plugins: Update DTMF Dolphin [(by litui)](https://github.com/litui/dtmf_dolphin)
-* Plugins: Update TOTP [(by akopachov)](https://github.com/akopachov/flipper-zero_authenticator)
-* Plugins: iButton Fuzzer and RFID Fuzzer improvements
-* Plugins: i2c tools fix name display 
-* Plugins: Add 3 new plugins BlackJack, Solitaire [(by teeebor)](https://github.com/teeebor/flipper_games) and HEX Viewer [(by QtRoS)](https://github.com/QtRoS/flipperzero-firmware)
-* Plugins -> PR: Wifi marauder BT menus option (by @rf-bandit | PR #164)
-* Plugins -> PR: Update i2c tools (New UI) (by @NaejEL | PR #171)
-* Plugins -> PR: Fix htu21d falsely reading temp as humidity (by @GottZ | PR #175)
-* SubGHz -> PR: GUI Fix - Allow setting RSSI trigger to beggining (by @TQMatvey | PR #180)
-* SubGHz: Remove not widely used frequency from hopper
-* SubGHz: Fix starline encoder
-* SubGHz: Frequency Analyzer -> Save last trigger level
-* SubGHz: Speedup subghz launch from favourites
-* SubGHz: Add new freqs and modulation to user config
-* Infrared: Update universal remote assets (by @Amec0e)
-* CI/CD: Improvements, dev builds (can be found in this telegram channel -> https://t.me/kotnehleb)
-* Power -> PR: Show battery percentile while charging (by @TQMatvey | PR #178)
-* Docs -> PR: Some updates (by @lucemans | PR #169 and #170)
-* CLI -> PR: Update cli_commands.c To add `src` / `source` command for people exploring cli (by @PharoahCoder | PR #176)
-* OFW: Fix U2F HID vulnerability
-* OFW: Core: thread allocation shortcut
-* OFW: WS: add protocol GT-WT02
-* OFW: SubGhz: add protocol "Ansonic"
-* OFW: SubGhz: add protocol Nice_Flo 20bit
+* Plugins: SubGHz Bruteforcer -> Allow to select two bytes in `BF existing dump` ! Change between byte selection size by pressing Up button
+* Plugins: SubGHz Bruteforcer -> Add CAME 315Mhz
+* SubGHz: Partially fix strange issue with subghz decode raw
+* Xmas / New Year animation (by @Svaarich)
+* OFW: NFC: fix NTAG203 info scene
+* OFW: Fix crash in iButton notifications routine
+* OFW: U2F HID descriptor fix
+* OFW: USB HID: fix key name
+* OFW: SubGhz: unit_test modification of text files to one frequency and modulation
 
 #### [🎲 Download latest extra apps pack](https://download-directory.github.io/?url=https://github.com/xMasterX/unleashed-extra-pack/tree/main/apps)
 
@@ -35,12 +18,14 @@
 ## Please support development of the project
 * Boosty: https://boosty.to/mmxdev
 * destream (100 EUR min): https://destream.net/live/MMX/donate
+* cloudtips (only RU payments accepted): https://pay.cloudtips.ru/p/7b3e9d65
 * USDT(TRC20): `TSXcitMSnWXUFqiUfEXrTVpVewXy2cYhrs`
 * BCH: `qquxfyzntuqufy2dx0hrfr4sndp0tucvky4sw8qyu3`
-* ETH/BSC/ERC20-Tokens: `0xFebF1bBc8229418FF2408C07AF6Afa49152fEc6a`
+* ETH/BSC/ERC20-Tokens: `darkflippers.eth` (or `0xFebF1bBc8229418FF2408C07AF6Afa49152fEc6a`)
 * BTC: `bc1q0np836jk9jwr4dd7p6qv66d04vamtqkxrecck9`
 * DOGE: `D6R6gYgBn5LwTNmPyvAQR6bZ9EtGgFCpvv`
 * LTC: `ltc1q3ex4ejkl0xpx3znwrmth4lyuadr5qgv8tmq8z9`
+* XMR (Monero): `41xUz92suUu1u5Mu4qkrcs52gtfpu9rnZRdBpCJ244KRHf6xXSvVFevdf2cnjS7RAeYr5hn9MsEfxKoFDRSctFjG5fv1Mhn`
 
 **Note: To avoid issues with .dfu, prefer installing using .tgz with qFlipper, web updater or by self update package, all needed assets will be installed**
 
