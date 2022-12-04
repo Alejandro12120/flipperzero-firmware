@@ -1,5 +1,5 @@
 V:0
-T:1669314708
+T:1670145001
 D:apps
 D:badusb
 D:dolphin
@@ -50,7 +50,7 @@ F:d16c61e6d51cdbd79f5d512736eee011:44184:apps/Tools/Picopass.fap
 F:98844d5df6ddf92c590a0c88c2771093:16628:apps/Tools/RFID_Fuzzer.fap
 F:fbed363acf2b07e79b1e9272c2d20ba8:10004:apps/Tools/Signal_Generator.fap
 F:ad0af0cabe5e1f9e8dbdac0c2f485cc6:10612:apps/Tools/Spectrum_Analyzer.fap
-F:43c0d07d29a1b140838373f773c42c91:39140:apps/Tools/SubGHz_Bruteforcer.fap
+F:bd52e03d6564de706efab6bbd2defb3c:40540:apps/Tools/SubGHz_Bruteforcer.fap
 F:32b7cd166f89d2f5a4749eb72482c2c9:12724:apps/Tools/SubGHz_Playlist.fap
 F:7f520006671fd4d498af0111c7b3453a:38076:apps/Tools/dap_link.fap
 F:4e0f08c65f5aaad6257e4757f2f6ef62:27816:apps/Tools/dtmf_dolphin.fap
