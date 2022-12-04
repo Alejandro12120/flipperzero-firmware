@@ -1,5 +1,5 @@
 V:0
-T:1670145001
+T:1670175835
 D:apps
 D:badusb
 D:dolphin
@@ -58,12 +58,12 @@ F:82d80ac36e292ceeed05f6293e7a4c4f:24304:apps/Tools/hid_ble.fap
 F:7877329008dfc08552d60699efd8c6a6:16052:apps/Tools/iBtn_Fuzzer.fap
 F:3383fc4508ec7006e601d95c0ffc5230:20320:apps/Tools/nfc_magic.fap
 F:723816c9c6d509fc798f41a734902bd3:59608:apps/Tools/weather_station.fap
+D:badusb/execution
+D:badusb/exfiltration
 D:badusb/layouts
-F:835f2cbe42cd77bb235f52b9baa78655:508:badusb/Discord.txt
-F:06486e0b61b5555c52b077c4778e6cc1:956:badusb/Honk.txt
-F:2f2d21843efc9287dc43ccf19f1438d0:5281:badusb/Kiosk-Evasion-Bruteforce.txt
-F:ddab5ba6106dad4778f61dc63285ec2b:923:badusb/Mario-head.txt
-F:fcc643ef9e89a26f2a662ebf0b8de3df:1157:badusb/ProMoan.txt
+D:badusb/troll
+F:2f2d21843efc9287dc43ccf19f1438d0:5281:badusb/execution/Kiosk-Evasion-Bruteforce.txt
+F:835f2cbe42cd77bb235f52b9baa78655:508:badusb/exfiltration/Discord.txt
 F:5eea27975bd81d2c1ca2570b7c29e034:256:badusb/layouts/ba-BA.kl
 F:1139810f61ec7f8c8fe0398d92578b31:256:badusb/layouts/da-DA.kl
 F:13504463372b269bd102c68725921d90:256:badusb/layouts/de-CH.kl
@@ -86,6 +86,9 @@ F:5eea27975bd81d2c1ca2570b7c29e034:256:badusb/layouts/si-SI.kl
 F:6461e0e3897f295d59efecd70ca3a294:256:badusb/layouts/sk-SK.kl
 F:b62d559209e0d450b4d77f76e29ec1be:256:badusb/layouts/sv-SE.kl
 F:1e5d47f3eac53ed8cca23894456cd544:256:badusb/layouts/tr-TR.kl
+F:06486e0b61b5555c52b077c4778e6cc1:956:badusb/troll/Honk.txt
+F:a0476a9fe47a83638ae287b6989c2186:924:badusb/troll/Mario-head.txt
+F:fcc643ef9e89a26f2a662ebf0b8de3df:1157:badusb/troll/ProMoan.txt
 D:dolphin/L1_Boxing_128x64
 D:dolphin/L1_Cry_128x64
 D:dolphin/L1_Furippa1_128x64
