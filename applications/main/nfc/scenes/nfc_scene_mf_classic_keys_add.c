@@ -32,7 +32,7 @@ bool nfc_scene_mf_classic_keys_add_on_event(void* context, SceneManagerEvent eve
             // Add key to dict
             // bool key_added = false;
             MfClassicDict* userDict = mf_classic_dict_alloc(MfClassicDictTypeUser);
-            MfClassicDict* flipperDict = mf_classic_dict_alloc(MfClassicDictTypeFlipper);
+            MfClassicDict* flipperDict = mf_classic_dict_alloc(MfClassicDictTypeSystem);
 
             if(userDict && flipperDict) {
                 if(mf_classic_dict_is_key_present(userDict, nfc->byte_input_store) ||
