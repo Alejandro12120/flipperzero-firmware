@@ -1,5 +1,5 @@
 entry,status,name,type,params
-Version,+,11.10,,
+Version,+,11.11,,
 Header,+,applications/services/bt/bt_service/bt.h,,
 Header,+,applications/services/cli/cli.h,,
 Header,+,applications/services/cli/cli_vcp.h,,
@@ -635,8 +635,8 @@ Function,+,canvas_invert_color,void,Canvas*
 Function,+,canvas_reset,void,Canvas*
 Function,+,canvas_set_bitmap_mode,void,"Canvas*, _Bool"
 Function,+,canvas_set_color,void,"Canvas*, Color"
-Function,+,canvas_set_font,void,"Canvas*, Font"
 Function,+,canvas_set_custom_u8g2_font,void,"Canvas*, const uint8_t*"
+Function,+,canvas_set_font,void,"Canvas*, Font"
 Function,+,canvas_set_font_direction,void,"Canvas*, CanvasDirection"
 Function,-,canvas_set_orientation,void,"Canvas*, CanvasOrientation"
 Function,+,canvas_string_width,uint16_t,"Canvas*, const char*"
@@ -4358,11 +4358,11 @@ Function,-,vTaskSetTaskNumber,void,"TaskHandle_t, const UBaseType_t"
 Function,-,vTaskSetThreadLocalStoragePointer,void,"TaskHandle_t, BaseType_t, void*"
 Function,-,vTaskSetTimeOutState,void,TimeOut_t*
 Function,-,vTaskStartScheduler,void,
-Function,-,vTaskStepTick,void,TickType_t
+Function,-,vTaskStepTick,void,const TickType_t
 Function,-,vTaskSuspend,void,TaskHandle_t
 Function,-,vTaskSuspendAll,void,
 Function,-,vTaskSwitchContext,void,
-Function,-,vTimerSetReloadMode,void,"TimerHandle_t, const BaseType_t"
+Function,-,vTimerSetReloadMode,void,"TimerHandle_t, const UBaseType_t"
 Function,-,vTimerSetTimerID,void,"TimerHandle_t, void*"
 Function,-,vTimerSetTimerNumber,void,"TimerHandle_t, UBaseType_t"
 Function,+,validator_is_file_alloc_init,ValidatorIsFile*,"const char*, const char*, const char*"
@@ -4519,13 +4519,12 @@ Function,-,xTaskPriorityInherit,BaseType_t,const TaskHandle_t
 Function,-,xTaskRemoveFromEventList,BaseType_t,const List_t*
 Function,-,xTaskResumeAll,BaseType_t,
 Function,-,xTaskResumeFromISR,BaseType_t,TaskHandle_t
-Function,-,xTimerCreate,TimerHandle_t,"const char*, const TickType_t, const BaseType_t, void*, TimerCallbackFunction_t"
-Function,-,xTimerCreateStatic,TimerHandle_t,"const char*, const TickType_t, const BaseType_t, void*, TimerCallbackFunction_t, StaticTimer_t*"
+Function,-,xTimerCreate,TimerHandle_t,"const char*, const TickType_t, const UBaseType_t, void*, TimerCallbackFunction_t"
+Function,-,xTimerCreateStatic,TimerHandle_t,"const char*, const TickType_t, const UBaseType_t, void*, TimerCallbackFunction_t, StaticTimer_t*"
 Function,-,xTimerCreateTimerTask,BaseType_t,
 Function,-,xTimerGenericCommand,BaseType_t,"TimerHandle_t, const BaseType_t, const TickType_t, BaseType_t*, const TickType_t"
 Function,-,xTimerGetExpiryTime,TickType_t,TimerHandle_t
 Function,-,xTimerGetPeriod,TickType_t,TimerHandle_t
-Function,-,xTimerGetReloadMode,BaseType_t,TimerHandle_t
 Function,-,xTimerGetTimerDaemonTaskHandle,TaskHandle_t,
 Function,-,xTimerIsTimerActive,BaseType_t,TimerHandle_t
 Function,-,xTimerPendFunctionCall,BaseType_t,"PendedFunction_t, void*, uint32_t, TickType_t"
