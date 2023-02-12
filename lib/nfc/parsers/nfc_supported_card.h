@@ -10,6 +10,7 @@ typedef enum {
     NfcSupportedCardTypePlantain4K,
     NfcSupportedCardTypeTroika4K,
     NfcSupportedCardTypeTwoCities,
+    NfcSupportedCardTypeAndalucia,
     NfcSupportedCardTypeAllInOne,
 
     NfcSupportedCardTypeEnd,
