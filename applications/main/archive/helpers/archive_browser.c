@@ -57,9 +57,14 @@ static void archive_list_load_cb(void* context, uint32_t list_load_offset) {
         false);
 }
 
-static void
-    archive_list_item_cb(void* context, FuriString* item_path, bool is_folder, bool is_last) {
+static void archive_list_item_cb(
+    void* context,
+    FuriString* item_path,
+    uint32_t idx,
+    bool is_folder,
+    bool is_last) {
     furi_assert(context);
+    UNUSED(idx);
     ArchiveBrowserView* browser = (ArchiveBrowserView*)context;
 
     if(!is_last) {
@@ -69,7 +74,9 @@ static void
             browser->view,
             ArchiveBrowserViewModel * model,
             {
-                files_array_sort(model->files);
+                if(model->item_cnt <= BROWSER_SORT_THRESHOLD) {
+                    files_array_sort(model->files);
+                }
                 model->list_loading = false;
             },
             true);

@@ -1,5 +1,5 @@
 V:0
-T:1675694523
+T:1676213366
 D:apps
 D:badusb
 D:dolphin
@@ -43,7 +43,7 @@ F:4a2547dd48708b34bcef00eb414b6a2b:12392:apps/Misc/Multi_Converter.fap
 F:5f01c33a8110769fa52233ee35eabfe1:20420:apps/Misc/USB_Keyboard.fap
 F:8c0660dfbe8707118cd73e87bae7dd1d:5400:apps/Misc/hex_viewer.fap
 F:816c8b086b35ec5b25b8f2bd7447b465:5156:apps/Misc/text_viewer.fap
-F:18bb4d4cd3e27e4fdb48bb10c0b37741:75208:apps/Misc/totp.fap
+F:4ecb3bfc086270468515ad702b1dd722:75292:apps/Misc/totp.fap
 F:f73eacbaa930cc8317c51365b8196ba8:10820:apps/Music/Metronome.fap
 F:532b8649d0c9829b48e199c32785e834:13272:apps/Music/Music_Player.fap
 F:10008f0b379a23533239028552b266a2:10832:apps/Music/WAV_Player.fap
@@ -52,7 +52,7 @@ F:03827dca0f1c716aad8fbd2484f9a991:44648:apps/Tools/Picopass.fap
 F:ce4f8807857d0e7c5950f13015a93edb:16656:apps/Tools/RFID_Fuzzer.fap
 F:c16fa05a7f90865b798c7975f10f5523:9988:apps/Tools/Signal_Generator.fap
 F:f4f430eef4628a6f0588c670f5251ec6:10612:apps/Tools/Spectrum_Analyzer.fap
-F:ea36f5d26f4b965b05f601d994d6ab8c:44712:apps/Tools/SubGHz_Bruteforcer.fap
+F:46f7749730df29d1a3eb02481449b83c:44876:apps/Tools/SubGHz_Bruteforcer.fap
 F:8f190394f951b5bc6d41dfded6462e5f:12724:apps/Tools/SubGHz_Playlist.fap
 F:9a69ed40d1d7ee5cc5a38b1d41f6018a:38072:apps/Tools/dap_link.fap
 F:dbc45467cf3463fdca89c53d3e2dfafe:27948:apps/Tools/dtmf_dolphin.fap
@@ -499,7 +499,7 @@ D:nfc/assets
 F:81dc04c7b181f94b644079a71476dff4:4742:nfc/assets/aid.nfc
 F:86efbebdf41bb6bf15cc51ef88f069d5:2565:nfc/assets/country_code.nfc
 F:41b4f08774249014cb8d3dffa5f5c07d:1757:nfc/assets/currency_code.nfc
-F:72fa1281d1196f0a4340a814790076e3:53645:nfc/assets/mf_classic_dict.nfc
+F:2bdb693c2a23dc310a1875dacfd768b0:53442:nfc/assets/mf_classic_dict.nfc
 D:picopass/assets
 F:82130dce451a0b8abb0cb359b460d147:947:picopass/assets/iclass_elite_dict.txt
 F:319958d37b2316a2e752ebb856c32524:126:rfidfuzzer/example_uids_em4100.txt
