@@ -68,6 +68,7 @@ Encoders/sending made by Eng1n33r & @xMasterX:
 - Keeloq: FAAC RC,XT
 - Keeloq: Mutancode
 - Keeloq: Normstahl
+- Keeloq: Beninca
 - CAME Atomo
 - Nice Flor S
 - FAAC SLH (Spa) [External seed calculation required (For info contact me in Discord: Nano#8998)] 
@@ -141,6 +142,7 @@ You can support us by using links or addresses below:
 - Text Viewer [(by kowalski7cc & kyhwana)](https://github.com/kowalski7cc/flipper-zero-text-viewer/tree/refactor-text-app)
 - **UART Terminal** [(by cool4uma)](https://github.com/cool4uma/UART_Terminal/tree/main)
 - **ProtoView** [(by antirez)](https://github.com/antirez/protoview)
+- **SWD Probe** [(by g3gg0)](https://github.com/g3gg0/flipper-swd_probe)
 
 Games:
 - DOOM (fixed) [(by p4nic4ttack)](https://github.com/p4nic4ttack/doom-flipper-zero/)
@@ -165,6 +167,11 @@ Games:
 - Sub-GHz -> Press OK in frequency analyzer to use detected frequency in Read modes [(by derskythe)](https://github.com/DarkFlippers/unleashed-firmware/pull/77)
 - Sub-GHz -> Long press OK button in Sub-GHz Frequency analyzer to switch to Read menu [(by derskythe)](https://github.com/DarkFlippers/unleashed-firmware/pull/79)
 - Lock device with pin(or regular lock if pin not set) by holding UP button on main screen [(by an4tur0r)](https://github.com/DarkFlippers/unleashed-firmware/pull/107)
+* SubGHz -> **Hold right in received signal list to delete selected signal**
+* SubGHz -> **Custom buttons for Keeloq and Alutech AT4N** - now you can use arrow buttons to send signal with different button code
+* SubGHz -> Debug mode counter increase settings (+5, +10, default: +1)
+* SubGHz -> Debug PIN output settings for protocol development
+* Infrared -> Debug TX PIN output settings
 
 # Instructions
 ## [- How to install firmware](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/HowToInstall.md)

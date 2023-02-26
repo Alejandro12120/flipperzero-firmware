@@ -1,12 +1,12 @@
 ### New changes
-* SubGHz: **Nice ON2E (Nice One)** support (by @assasinfil | PR #335)
-* SubGHz: Remove 467.75 From freq analyzer since it has too much noise (Frequency is still can be used, just excluded from FA to avoid false detections)
-* Archive and FileBrowser: **Fixed more navigation issues** (by @Willy-JL | PR #334)
-* Plugins -> SubGHz Bruteforcer: Fix Linear Delta 3 repeats (now its more stable and we will be sure signal is received correctly)
-* Plugins: Updated TOTP (Authenticator) [(by akopachov)](https://github.com/akopachov/flipper-zero_authenticator)
-* OFW: **Fix Cyfral & Metakom emulation (My temp fix removed and proper fix from OFW applied)**
-* OFW: BadUSB: disable CDC mode, USB mode switch fix
-* OFW: Updater visual fixes
+* SubGHz: **Keeloq: Beninca - protocol support**
+* SubGHz: **Hold right in received signal list to delete selected signal**
+* SubGHz: **Custom buttons for Keeloq and Alutech AT4N** - now you can use arrow buttons to send signal with different button code
+* SubGHz: Debug mode counter increase settings (+5, +10, default: +1)
+* Infrared: Debug TX PIN output settings (ability to move tx signal out to GPIO) (implemented #364)
+* Plugins: Updated -> [BH1750] Lightmeter [(by oleksiikutuzov)](https://github.com/oleksiikutuzov/flipperzero-lightmeter)
+* OFW: BadUSB -> STRINGDELAY(STRING_DELAY) feature, worker signal handling refactoring -> (Fixed #365 (BadUSB won't detect connection and/or hangs))
+* OFW: Grammar fixes
 
 #### [🎲 Download latest extra apps pack](https://download-directory.github.io/?url=https://github.com/xMasterX/unleashed-extra-pack/tree/main/apps)
 
