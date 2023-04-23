@@ -5,6 +5,7 @@ typedef enum {
     DesktopMainEventOpenArchive,
     DesktopMainEventOpenFavoritePrimary,
     DesktopMainEventOpenFavoriteSecondary,
+    DesktopMainEventOpenFavoriteTertiary,
     DesktopMainEventOpenMenu,
     DesktopMainEventOpenDebug,
     DesktopMainEventOpenPassport,
@@ -38,6 +39,8 @@ typedef enum {
     DesktopLockMenuEventPinLock,
     DesktopLockMenuEventDummyModeOn,
     DesktopLockMenuEventDummyModeOff,
+    DesktopLockMenuEventStealthModeOn,
+    DesktopLockMenuEventStealthModeOff,
 
     DesktopAnimationEventCheckAnimation,
     DesktopAnimationEventNewIdleAnimation,

@@ -3,12 +3,15 @@
 
 #include "../desktop_settings_app.h"
 #include "desktop_settings_scene.h"
+#include <power/power_service/power.h>
 
 #define SCENE_EVENT_SELECT_FAVORITE_PRIMARY 0
 #define SCENE_EVENT_SELECT_FAVORITE_SECONDARY 1
-#define SCENE_EVENT_SELECT_PIN_SETUP 2
-#define SCENE_EVENT_SELECT_AUTO_LOCK_DELAY 3
-#define SCENE_EVENT_SELECT_BATTERY_DISPLAY 4
+#define SCENE_EVENT_SELECT_FAVORITE_TERTIARY 2
+#define SCENE_EVENT_SELECT_PIN_SETUP 3
+#define SCENE_EVENT_SELECT_AUTO_LOCK_DELAY 4
+#define SCENE_EVENT_SELECT_AUTO_LOCK_PIN 5
+#define SCENE_EVENT_SELECT_BATTERY_DISPLAY 6
 
 #define AUTO_LOCK_DELAY_COUNT 9
 const char* const auto_lock_delay_text[AUTO_LOCK_DELAY_COUNT] = {
@@ -79,6 +82,8 @@ void desktop_settings_scene_start_on_enter(void* context) {
 
     variable_item_list_add(variable_item_list, "Secondary Favorite App", 1, NULL, NULL);
 
+    variable_item_list_add(variable_item_list, "Tertiary Favorite App", 1, NULL, NULL);
+
     variable_item_list_add(variable_item_list, "PIN Setup", 1, NULL, NULL);
 
     item = variable_item_list_add(
@@ -129,12 +134,17 @@ bool desktop_settings_scene_start_on_event(void* context, SceneManagerEvent even
     if(event.type == SceneManagerEventTypeCustom) {
         switch(event.event) {
         case SCENE_EVENT_SELECT_FAVORITE_PRIMARY:
-            scene_manager_set_scene_state(app->scene_manager, DesktopSettingsAppSceneFavorite, 1);
+            scene_manager_set_scene_state(app->scene_manager, DesktopSettingsAppSceneFavorite, 0);
             scene_manager_next_scene(app->scene_manager, DesktopSettingsAppSceneFavorite);
             consumed = true;
             break;
         case SCENE_EVENT_SELECT_FAVORITE_SECONDARY:
-            scene_manager_set_scene_state(app->scene_manager, DesktopSettingsAppSceneFavorite, 0);
+            scene_manager_set_scene_state(app->scene_manager, DesktopSettingsAppSceneFavorite, 1);
+            scene_manager_next_scene(app->scene_manager, DesktopSettingsAppSceneFavorite);
+            consumed = true;
+            break;
+        case SCENE_EVENT_SELECT_FAVORITE_TERTIARY:
+            scene_manager_set_scene_state(app->scene_manager, DesktopSettingsAppSceneFavorite, 2);
             scene_manager_next_scene(app->scene_manager, DesktopSettingsAppSceneFavorite);
             consumed = true;
             break;
@@ -143,6 +153,9 @@ bool desktop_settings_scene_start_on_event(void* context, SceneManagerEvent even
             consumed = true;
             break;
         case SCENE_EVENT_SELECT_AUTO_LOCK_DELAY:
+            consumed = true;
+            break;
+        case SCENE_EVENT_SELECT_AUTO_LOCK_PIN:
             consumed = true;
             break;
         case SCENE_EVENT_SELECT_BATTERY_DISPLAY:
@@ -157,4 +170,9 @@ void desktop_settings_scene_start_on_exit(void* context) {
     DesktopSettingsApp* app = context;
     variable_item_list_reset(app->variable_item_list);
     DESKTOP_SETTINGS_SAVE(&app->settings);
+
+    // Trigger UI update in case we changed battery layout
+    Power* power = furi_record_open(RECORD_POWER);
+    power_trigger_ui_update(power);
+    furi_record_close(RECORD_POWER);
 }
