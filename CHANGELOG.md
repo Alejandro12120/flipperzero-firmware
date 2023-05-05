@@ -1,27 +1,12 @@
 ### New changes 
-* Power + BLE: DeepSleep + required ble stack upgrade added back, all known issues was fixed in OFW, no issues was found during our tests
-* Desktop: Allow locking without pin using Up menu on desktop (Short click on `Lock` = Without PIN / Long = With PIN)
-* RFID: Add confirmation message before running `Clear T5577 Password` 
-* RFID: Add more user friendly RAW emulation via UI [(by Dan Caprita)](https://forum.flipperzero.one/t/electra-intercom/6368/43)
-* SubGHz: Fixed `Frequency Analyzer` issues, fixed `Read` mode issues
-* SubGHz: Fix NFC crash when using external CC1101 radio module
-* SubGHz: Fix multiple external CC1101 radio module issues, (int callbacks, SPI handlers init/reinit)
-* SubGHz: Using scene manager function in add manually (by @gid9798 | PR #437)
-* Plugins: ESP32: WiFi Marauder - add icon for log files in logs browser
-* Plugins: Update **ESP32: WiFi Marauder companion** plugin [(by 0xchocolate)](https://github.com/0xchocolate/flipperzero-firmware-with-wifi-marauder-companion) merged [PR by @tcpassos](https://github.com/0xchocolate/flipperzero-firmware-with-wifi-marauder-companion/pull/11)
-* Plugins: Update **TOTP (Authenticator)** [(by akopachov)](https://github.com/akopachov/flipper-zero_authenticator)
-* Plugins: Fix RFID Fuzzer and iButton Fuzzer crashes
-* Plugins: iButton Fuzzer default keys update (by @team-orangeBlue)
-* Infrared: Updated infrared assets (by @amec0e | PR #441)
-* Docs: Update **How To Install** images (by @krolchonok | PR #436)
-* OFW PR 2620: NFC: Fix reading Mifare Classic cards with unusual access conditions and fix emulation of unknown keys (by Astrrra)
-* OFW PR 2616: Picopass: remove spaces in CSN (by bettse)
-* OFW PR 2604: WS: add protocol "Wendox W6726" (by Skorpionm)
-* OFW PR 2607: BadUSB: command parser fix (by nminaylov)
-* OFW: Keep HSI16 working in stop mode.
-* OFW: FuriHal: use proper divider for core2 when transition to sleep, remove extra stop mode transition checks, cleanup code. Furi: proper assert and check messages.
-* OFW: Don't reboot on crash in debug builds
-* OFW: cubewb: downgraded to v1.15.0 
+* Plugins: Added Numpad keyboard to HID app (by @clipboard1 | PR #452)
+* Infrared: Updated universal remote assets (by @amec0e | PR #454)
+* Update slideshow: Replace QR code with good old link
+* OFW: Dolphin builder in ufbt; minor ufbt/fbt improvements
+* OFW: Added API version to device info 
+* OFW: Gui: relax some asserts in view
+* OFW: Move gauge calibration to separate header, add f18 calibration
+* OFW: Fix TERMINFO on Linux systems 
 
 #### [🎲 Download latest extra apps pack](https://github.com/xMasterX/all-the-plugins/archive/refs/heads/main.zip)
 
@@ -31,7 +16,6 @@
 
 ## Please support development of the project
 * **Boosty** (patreon alternative): https://boosty.to/mmxdev
-* Ko-Fi: https://ko-fi.com/masterx
 * cloudtips (only RU payments accepted): https://pay.cloudtips.ru/p/7b3e9d65
 * YooMoney (only RU payments accepted): https://yoomoney.ru/fundraise/XA49mgQLPA0.221209
 * USDT(TRC20): `TSXcitMSnWXUFqiUfEXrTVpVewXy2cYhrs`
