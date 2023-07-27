@@ -15,7 +15,7 @@ Applications for factory testing the Flipper.
 - `text_box_test`       - UI tests
 - `uart_echo`           - UART mode test 
 - `unit_tests`          - Unit tests
-- `usb_mouse`           - USB HID test
+- `usb_mouse`           - USB HID  _(Removed)_
 - `usb_test`            - Other USB tests
 - `vibro_test`          - Vibro test
 

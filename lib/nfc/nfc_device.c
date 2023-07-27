@@ -1255,7 +1255,7 @@ static void nfc_device_get_key_cache_file_path(NfcDevice* dev, FuriString* file_
     furi_string_cat_printf(file_path, NFC_DEVICE_KEYS_EXTENSION);
 }
 
-static bool nfc_device_save_mifare_classic_keys(NfcDevice* dev) {
+bool nfc_device_save_mifare_classic_keys(NfcDevice* dev) {
     FlipperFormat* file = flipper_format_file_alloc(dev->storage);
     MfClassicData* data = &dev->dev_data.mf_classic_data;
     FuriString* temp_str;

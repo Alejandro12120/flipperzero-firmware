@@ -298,6 +298,11 @@ static void power_check_charging_state(Power* power) {
 static bool power_update_info(Power* power) {
     PowerInfo info;
 
+    DesktopSettings* settings = malloc(sizeof(DesktopSettings));
+    DESKTOP_SETTINGS_LOAD(settings);
+    power->displayBatteryPercentage = settings->displayBatteryPercentage;
+    free(settings);
+
     info.is_charging = furi_hal_power_is_charging();
     info.gauge_is_ok = furi_hal_power_gauge_is_ok();
     info.is_shutdown_requested = furi_hal_power_is_shutdown_requested();

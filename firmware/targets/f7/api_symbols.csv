@@ -2131,6 +2131,7 @@ Function,+,nfc_device_load,_Bool,"NfcDevice*, const char*, _Bool"
 Function,+,nfc_device_load_key_cache,_Bool,NfcDevice*
 Function,+,nfc_device_restore,_Bool,"NfcDevice*, _Bool"
 Function,+,nfc_device_save,_Bool,"NfcDevice*, const char*"
+Function,+,nfc_device_save_mifare_classic_keys,_Bool,NfcDevice*
 Function,+,nfc_device_save_shadow,_Bool,"NfcDevice*, const char*"
 Function,+,nfc_device_set_loading_callback,void,"NfcDevice*, NfcLoadingCallback, void*"
 Function,+,nfc_device_set_name,void,"NfcDevice*, const char*"
@@ -3056,11 +3057,11 @@ Function,-,vTaskSetTaskNumber,void,"TaskHandle_t, const UBaseType_t"
 Function,-,vTaskSetThreadLocalStoragePointer,void,"TaskHandle_t, BaseType_t, void*"
 Function,-,vTaskSetTimeOutState,void,TimeOut_t*
 Function,-,vTaskStartScheduler,void,
-Function,-,vTaskStepTick,void,TickType_t
+Function,-,vTaskStepTick,void,const TickType_t
 Function,-,vTaskSuspend,void,TaskHandle_t
 Function,-,vTaskSuspendAll,void,
 Function,-,vTaskSwitchContext,void,
-Function,-,vTimerSetReloadMode,void,"TimerHandle_t, const BaseType_t"
+Function,-,vTimerSetReloadMode,void,"TimerHandle_t, const UBaseType_t"
 Function,-,vTimerSetTimerID,void,"TimerHandle_t, void*"
 Function,-,vTimerSetTimerNumber,void,"TimerHandle_t, UBaseType_t"
 Function,+,validator_is_file_alloc_init,ValidatorIsFile*,"const char*, const char*, const char*"
@@ -3206,13 +3207,12 @@ Function,-,xTaskPriorityInherit,BaseType_t,const TaskHandle_t
 Function,-,xTaskRemoveFromEventList,BaseType_t,const List_t*
 Function,-,xTaskResumeAll,BaseType_t,
 Function,-,xTaskResumeFromISR,BaseType_t,TaskHandle_t
-Function,-,xTimerCreate,TimerHandle_t,"const char*, const TickType_t, const BaseType_t, void*, TimerCallbackFunction_t"
-Function,-,xTimerCreateStatic,TimerHandle_t,"const char*, const TickType_t, const BaseType_t, void*, TimerCallbackFunction_t, StaticTimer_t*"
+Function,-,xTimerCreate,TimerHandle_t,"const char*, const TickType_t, const UBaseType_t, void*, TimerCallbackFunction_t"
+Function,-,xTimerCreateStatic,TimerHandle_t,"const char*, const TickType_t, const UBaseType_t, void*, TimerCallbackFunction_t, StaticTimer_t*"
 Function,-,xTimerCreateTimerTask,BaseType_t,
 Function,-,xTimerGenericCommand,BaseType_t,"TimerHandle_t, const BaseType_t, const TickType_t, BaseType_t*, const TickType_t"
 Function,-,xTimerGetExpiryTime,TickType_t,TimerHandle_t
 Function,-,xTimerGetPeriod,TickType_t,TimerHandle_t
-Function,-,xTimerGetReloadMode,BaseType_t,TimerHandle_t
 Function,-,xTimerGetTimerDaemonTaskHandle,TaskHandle_t,
 Function,-,xTimerIsTimerActive,BaseType_t,TimerHandle_t
 Function,-,xTimerPendFunctionCall,BaseType_t,"PendedFunction_t, void*, uint32_t, TickType_t"

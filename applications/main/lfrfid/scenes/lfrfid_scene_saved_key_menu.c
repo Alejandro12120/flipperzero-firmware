@@ -40,7 +40,11 @@ bool lfrfid_scene_saved_key_menu_on_event(void* context, SceneManagerEvent event
     LfRfid* app = context;
     bool consumed = false;
 
-    if(event.type == SceneManagerEventTypeCustom) {
+    if(event.type == SceneManagerEventTypeBack) {
+        scene_manager_search_and_switch_to_previous_scene(
+            app->scene_manager, LfRfidSceneSelectKey);
+        consumed = true;
+    } else if(event.type == SceneManagerEventTypeCustom) {
         if(event.event == SubmenuIndexEmulate) {
             scene_manager_next_scene(app->scene_manager, LfRfidSceneEmulate);
             dolphin_deed(DolphinDeedRfidEmulate);
