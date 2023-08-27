@@ -1,4 +1,9 @@
 #include "../nfc_i.h"
+#include <dolphin/dolphin.h>
+#include <notification/notification.h>
+#include <notification/notification_messages.h>
+
+NotificationApp* notify;
 
 #define NFC_SCENE_DETECT_READER_PAIR_NONCES_MAX (10U)
 
@@ -24,6 +29,8 @@ void nfc_scene_detect_reader_callback(void* context) {
 }
 
 void nfc_scene_detect_reader_on_enter(void* context) {
+    notify = furi_record_open(RECORD_NOTIFICATION);
+
     Nfc* nfc = context;
 
     detect_reader_set_callback(nfc->detect_reader, nfc_scene_detect_reader_callback, nfc);
@@ -55,10 +62,14 @@ bool nfc_scene_detect_reader_on_event(void* context, SceneManagerEvent event) {
 
     if(event.type == SceneManagerEventTypeCustom) {
         if(event.event == NfcCustomEventViewExit) {
+            furi_record_close(RECORD_NOTIFICATION);
+
             nfc_worker_stop(nfc->worker);
             scene_manager_next_scene(nfc->scene_manager, NfcSceneMfkeyNoncesInfo);
             consumed = true;
         } else if(event.event == NfcWorkerEventDetectReaderMfkeyCollected) {
+            notification_message(notify, &sequence_success);
+
             nonces_collected += 2;
             scene_manager_set_scene_state(
                 nfc->scene_manager, NfcSceneDetectReader, nonces_collected);

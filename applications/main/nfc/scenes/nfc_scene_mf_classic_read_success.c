@@ -48,6 +48,9 @@ void nfc_scene_mf_classic_read_success_on_enter(void* context) {
     notification_message_block(nfc->notifications, &sequence_set_green_255);
 
     view_dispatcher_switch_to_view(nfc->view_dispatcher, NfcViewWidget);
+
+    //Save Mifare keys after read success
+    if(!nfc_device_save_mifare_classic_keys(nfc->dev)) return;
 }
 
 bool nfc_scene_mf_classic_read_success_on_event(void* context, SceneManagerEvent event) {

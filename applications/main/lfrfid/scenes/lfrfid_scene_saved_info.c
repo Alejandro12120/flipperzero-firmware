@@ -7,12 +7,18 @@ void lfrfid_scene_saved_info_on_enter(void* context) {
     FuriString* tmp_string;
     tmp_string = furi_string_alloc();
 
+    widget_add_button_element(widget, GuiButtonTypeLeft, "Back", lfrfid_widget_callback, app);
+
     furi_string_printf(
         tmp_string,
         "%s [%s]\r\n",
         furi_string_get_cstr(app->file_name),
         protocol_dict_get_name(app->dict, app->protocol_id));
 
+    widget_add_string_element(
+        widget, 16, 3, AlignLeft, AlignTop, FontPrimary, furi_string_get_cstr(tmp_string));
+
+    furi_string_reset(tmp_string);
     size_t size = protocol_dict_get_data_size(app->dict, app->protocol_id);
     uint8_t* data = (uint8_t*)malloc(size);
     protocol_dict_get_data(app->dict, app->protocol_id, data, size);
@@ -27,21 +33,34 @@ void lfrfid_scene_saved_info_on_enter(void* context) {
 
     FuriString* render_data;
     render_data = furi_string_alloc();
-    protocol_dict_render_data(app->dict, render_data, app->protocol_id);
+    protocol_dict_render_brief_data(app->dict, render_data, app->protocol_id);
     furi_string_cat_printf(tmp_string, "\r\n%s", furi_string_get_cstr(render_data));
     furi_string_free(render_data);
 
     widget_add_string_multiline_element(
-        widget, 0, 1, AlignLeft, AlignTop, FontSecondary, furi_string_get_cstr(tmp_string));
+        widget, 0, 16, AlignLeft, AlignTop, FontSecondary, furi_string_get_cstr(tmp_string));
+
+    widget_add_icon_element(app->widget, 0, 0, &I_RFIDSmallChip_14x14);
 
     view_dispatcher_switch_to_view(app->view_dispatcher, LfRfidViewWidget);
     furi_string_free(tmp_string);
 }
 
 bool lfrfid_scene_saved_info_on_event(void* context, SceneManagerEvent event) {
-    UNUSED(context);
-    UNUSED(event);
+    LfRfid* app = context;
+    SceneManager* scene_manager = app->scene_manager;
     bool consumed = false;
+
+    if(event.type == SceneManagerEventTypeBack) {
+        scene_manager_next_scene(scene_manager, LfRfidSceneSavedKeyMenu);
+        consumed = true;
+    } else if(event.type == SceneManagerEventTypeCustom) {
+        consumed = true;
+        if(event.event == GuiButtonTypeLeft) {
+            scene_manager_next_scene(scene_manager, LfRfidSceneSavedKeyMenu);
+        }
+    }
+
     return consumed;
 }
 
