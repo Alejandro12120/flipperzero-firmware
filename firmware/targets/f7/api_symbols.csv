@@ -2168,6 +2168,7 @@ Function,+,nfc_device_load,_Bool,"NfcDevice*, const char*, _Bool"
 Function,+,nfc_device_load_key_cache,_Bool,NfcDevice*
 Function,+,nfc_device_restore,_Bool,"NfcDevice*, _Bool"
 Function,+,nfc_device_save,_Bool,"NfcDevice*, const char*"
+Function,+,nfc_device_save_mifare_classic_keys,_Bool,NfcDevice*
 Function,+,nfc_device_save_shadow,_Bool,"NfcDevice*, const char*"
 Function,+,nfc_device_set_loading_callback,void,"NfcDevice*, NfcLoadingCallback, void*"
 Function,+,nfc_device_set_name,void,"NfcDevice*, const char*"

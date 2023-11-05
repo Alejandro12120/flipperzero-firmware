@@ -7,6 +7,7 @@
 #include "two_cities.h"
 #include "all_in_one.h"
 #include "opal.h"
+#include "andalucia.h"
 
 NfcSupportedCard nfc_supported_card[NfcSupportedCardTypeEnd] = {
     [NfcSupportedCardTypePlantain] =
@@ -43,6 +44,13 @@ NfcSupportedCard nfc_supported_card[NfcSupportedCardTypeEnd] = {
             .verify = two_cities_parser_verify,
             .read = two_cities_parser_read,
             .parse = two_cities_parser_parse,
+        },
+    [NfcSupportedCardTypeAndalucia] =
+        {
+            .protocol = NfcDeviceProtocolMifareClassic,
+            .verify = andalucia_parser_verify,
+            .read = andalucia_parser_read,
+            .parse = andalucia_parser_parse,
         },
     [NfcSupportedCardTypeAllInOne] =
         {

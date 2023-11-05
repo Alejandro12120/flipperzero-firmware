@@ -59,7 +59,7 @@ bool nfc_scene_mf_classic_keys_delete_on_event(void* context, SceneManagerEvent 
     if(event.type == SceneManagerEventTypeCustom) {
         if(event.event == GuiButtonTypeLeft) {
             consumed = scene_manager_search_and_switch_to_previous_scene(
-                nfc->scene_manager, NfcSceneMfClassicKeys);
+                nfc->scene_manager, NfcSceneMfClassicKeysList);
         } else if(event.event == GuiButtonTypeRight) {
             MfClassicDict* dict = mf_classic_dict_alloc(MfClassicDictTypeUser);
             if(mf_classic_dict_delete_index(dict, key_index)) {
