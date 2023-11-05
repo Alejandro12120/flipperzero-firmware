@@ -40,21 +40,29 @@ bool picopass_scene_loclass_on_event(void* context, SceneManagerEvent event) {
     Picopass* picopass = context;
     bool consumed = false;
 
-    uint32_t loclass_macs_collected =
-        scene_manager_get_scene_state(picopass->scene_manager, PicopassSceneLoclass);
-
     if(event.type == SceneManagerEventTypeCustom) {
         if(event.event == PicopassWorkerEventLoclassGotMac) {
+            uint32_t loclass_macs_collected =
+                scene_manager_get_scene_state(picopass->scene_manager, PicopassSceneLoclass);
             loclass_macs_collected++;
+            notification_message(picopass->notifications, &sequence_single_vibro);
             scene_manager_set_scene_state(
                 picopass->scene_manager, PicopassSceneLoclass, loclass_macs_collected);
             loclass_set_num_macs(picopass->loclass, loclass_macs_collected);
             if(loclass_macs_collected >= LOCLASS_MACS_TO_COLLECT) {
+                notification_message(picopass->notifications, &sequence_double_vibro);
                 scene_manager_previous_scene(picopass->scene_manager);
             }
             consumed = true;
         } else if(event.event == PicopassWorkerEventLoclassGotStandardKey) {
             loclass_set_header(picopass->loclass, "Loclass (Got Std Key)");
+            notification_message(picopass->notifications, &sequence_error);
+            consumed = true;
+        } else if(event.event == PicopassWorkerEventLoclassFileError) {
+            scene_manager_set_scene_state(picopass->scene_manager, PicopassSceneLoclass, 255);
+            loclass_set_num_macs(picopass->loclass, 255);
+            loclass_set_header(picopass->loclass, "Error Opening Log File");
+            picopass_blink_stop(picopass);
             consumed = true;
         } else if(event.event == PicopassCustomEventViewExit) {
             consumed = scene_manager_previous_scene(picopass->scene_manager);
